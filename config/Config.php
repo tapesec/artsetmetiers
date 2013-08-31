@@ -1,5 +1,5 @@
 <?php
-/** test de git
+/** test de git et puis
 * classe de configuration du model de connexion aux bases de données et des routes de l'application
 **/
 class Config{
