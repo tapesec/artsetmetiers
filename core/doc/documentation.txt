@@ -1,0 +1,128 @@
+Ce framework est basé sur une architecture MVC (Modèle vue controlleur).
+Il est composé des dossiers suivants :
+
+/config
+	Config.php : Une class pour configurer le niveau de débugage de l'application, et la base de donnée à utiliser pour l'application. La configuration de l'ACL se fait aussi dans cette classe
+
+/core
+	/doc
+		documentation.php : Le présent document
+		/UML
+			*---- ici les diagrammes UML du framework
+
+	Controller.php : La classe mère de tous les autres Controller dans laquelle vous trouverez toutes les méthodes natives de l'application comme les fonctions render(), set(), loadModel(), e404 ..
+
+	Dispatcher.php : la classe servant à appeler les autres classes en fonction de l'url envoyé
+
+	Model.php : Le model mère de tous les autres model de l'application, c'est ici que sont générées toutes les requetes sql avec l'objet PDO de vos futures applications.
+
+	Request.php : la classe qui symbolise les requetes http envoyées sur votre serveur
+
+	Router.php : Class permettant de parser l'url pour etre lu et exploiter par le dispatcher
+
+/Controller
+	Ici doit être placé tous les controllers de l'application à développé, ces controlleurs hériteront de la class Controller mère dans le core
+
+/Model
+	Toutes les classes modèles enfants sont à sauvegarder dans ce dossier et hériteront du modèle mère dans le core
+
+/views
+	Chaque controlleur doit posseder un dossier du même nom ici et dans lequel sera sauvegarder toutes les vues de chaque action du controlleur.
+
+	/Demo
+		index.php
+		hello.php
+
+	/Errors
+		e404.php
+	
+	Layouts/
+		default.php	
+
+Seul le dossier webroot est directement accessible par l'utilisateur
+/webroot
+
+C'est le fichier index.php qui se charge de recevoir les différents élements appelé par l'url parsé.
+index.php
+Ce fichier htacces se charge de rediriger toutes les urls vers index.php
+.htacces
+	/img
+		les images pour le css du site
+
+	/css
+		les feuilles de style
+
+	/javascript
+		les feuilles javascript de l'application
+
+
+
+=====================================================================================================================
+
+
+
+1/ LES CONTROLLEURS
+
+
+Les méthodes de la classe controller.
+
+Quand vous commencez à développer une application web avec ce framework vous allez créer un premier controlleur dans les règles du MVC. Vous ferez heriter ce controlleur de la classe Controller en ajoutant Controller en suffixe exemple :
+
+<?php
+class AccueilController extends Controller{
+	
+
+}
+?>
+
+Vous creerez ensuite votre première action de la manière suivante :
+
+<?php
+class ExempleController extends Controller{
+	
+	public function mapremiereaction(){
+
+	# .. le code
+	}
+
+}
+?>
+
+
+
+
+	1.x.x / Les diférentes méthodes de la classe Model :
+
+	<?php
+	class ExempleController extends Controller{
+
+		public function exemple(){
+
+			$this->loadModel($nomdumodel); // Le nom du Model doit etre au singulier et la premiere lettre en majuscule
+		}
+	}
+	?>
+
+	Vous avez acces à présent à toutes les méthodes de récupérations ou de création de base de donnée exemple avec la méthode find
+
+	class ExempleController extends Controller{
+
+		public function exemple(){
+
+			$this->loadModel('Modeltest'); // Le Model doit etre au singulier et la premiere lettre en majuscule
+
+			$data = $this->Modeltest->find(); 
+
+		}
+	} 
+	Model::find() est la requete select la plus basique pour recuperer toutes les données d'une table
+	
+
+2/  
+
+
+
+
+
+
+

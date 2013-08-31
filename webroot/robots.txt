@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow: /backoff/index
+Disallow: /message
+Disallow: /parcours
