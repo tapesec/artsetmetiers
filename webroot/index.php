@@ -3,7 +3,7 @@ $time_start = microtime(true); //récuperation du timestamp au début de l'execu
 define('DS', DIRECTORY_SEPARATOR);
 define('WEBROOT', dirname(__FILE__));
 define('ROOT', dirname(WEBROOT));
-define('BASE_URL',dirname($_SERVER['SCRIPT_NAME'])); //dirname($_SERVER['SCRIPT_NAME']);
+define('BASE_URL',''); //dirname($_SERVER['SCRIPT_NAME']);
 define('TEST', dirname(dirname($_SERVER['PHP_SELF'])));
 require_once ROOT.DS.'core'.DS.'includes.php';
 new Dispatcher();
