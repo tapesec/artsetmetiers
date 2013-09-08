@@ -2,8 +2,8 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<meta name="description" content="Vous êtes sur la page d'accueil du site Arts et Métiers IT, le site communautaire des étudiants du CNAM en Technologies de l'Information et de la COmmunication." />
-	<title>Bienvenue chez Arts et métiers IT !</title>
+	<meta name="description" content="Vous êtes sur la page d'accueil du site CNAM-IT.fr, le site communautaire des étudiants du CNAM en Technologies de l'Information et de la Communication." />
+	<title>Bienvenue chez CNAM-IT.fr</title>
 	<?php echo $this->link('css', 'bootstrap.min'); ?>
 	<?php echo $this->link('markitup/skins/simple', 'style', 'css'); ?>
 	<?php echo $this->link('markitup/sets/bbcode', 'style', 'css'); ?>
@@ -25,7 +25,7 @@
   		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  		ga('create', 'UA-42223274-1', 'frienddcop.com');
+  		ga('create', 'UA-42223274-1', 'cnam-it.fr');
 		ga('send', 'pageview');
 	</script>
 </head>

@@ -13,7 +13,7 @@ class Config{
 	static $homeController = 'accueil'; //définissez un controller par défaut pour votre page d'acceuil, ce controlleur devra avoir une méthode par défaut nommé index
 	//par exemple pour $homeController définit à Demo et contenant une méthode index, un site tel que www.monsite.com sera équivalent à www.monsite.com/demo/index
 
-	static $debug_level = 0; // définit le niveau d'information affiché en cas d'erreur dans vos interactions en base de données : 
+	static $debug_level = 1; // définit le niveau d'information affiché en cas d'erreur dans vos interactions en base de données : 
 	//									0 = aucune info, juste un message générique du type "service momentanément indisponnible (mode production),
 	//									1 = affiche les erreurs sql ou de connexion à PDO.
 

@@ -3,7 +3,7 @@
 <head>
 	<title>Arts et métiers</title>
 	<meta charset="UTF-8">
-	<meta name="description" content="Voici le blog et l'espace carte de visite de Arts et Métiers IT retrouvez y plein d'articles sur les cours du CNAM en informatique, le php, le HTML / CSS, et sur les domaines des nouvelles technologies ainsi que une page de profil totalement configurable pour faire apparaitre les diplomes et unités d'enseignement que vous avez obtenus" />
+	<meta name="description" content="Voici le blog et l'espace carte de visite de CNAM-IT.fr  retrouvez y plein d'articles sur les cours du CNAM en informatique, le php, le HTML / CSS, et sur les domaines des nouvelles technologies ainsi que une page de profil totalement configurable pour faire apparaitre les diplomes et unités d'enseignement que vous avez obtenus" />
 	<?php echo $this->link('css', 'bootstrap.min'); ?>
 	<?php echo $this->link('markitup/skins/simple', 'style', 'css'); ?>
 	<?php echo $this->link('markitup/sets/bbcode', 'style', 'css'); ?>
@@ -25,7 +25,7 @@
   		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  		ga('create', 'UA-42223274-1', 'frienddcop.com');
+  		ga('create', 'UA-42223274-1', 'cnam-it.fr');
 		ga('send', 'pageview');
 	</script>
 </head>
@@ -66,7 +66,11 @@
 			<?php echo $this->session->flash(); ?>
 		</div>
 	</div>
-	
+	<div class="row-fluid banner_area">
+		<div class="span12 banner">
+			<?php $this->img('design/img/banner_reduite.jpg', array('alt' => 'Bannière du site CNAM-IT.FR')); ?>
+		</div>	
+	</div>
 	<div class="container-fluid">
 		
 		<div class="row-fluid">	

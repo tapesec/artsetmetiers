@@ -537,10 +537,43 @@ class BackoffController extends Controller{
 		}
 
 	}
-
+	/**
+	 *@name fileExplorer
+	 *@description explorateur de fichier sur le serveur web
+	 *@param (string)$folder vaut stories par défaut
+	 *@return (array)folder_content
+	 * */
+	public function fileExplorer($folder='stories'){
+		if($this->request->is('GET')){
+			$this->layout = 'back';
+			$prev = explode('|', $folder);
+			$back = $prev[0];
+			//echo $back.'<br>';
+			$folder = str_replace('|','/',$folder);
+			$dir = WEBROOT.'/'.$folder;
+			$list = array();
+			if(is_dir($dir)){
+				if($dir_content = opendir($dir)){
+					while(($file = readdir($dir_content)) !== false){
+						if($file !== '.' && $file !== '..'){
+						/*echo "<a href=".BASE_URL.'/backoff/fileExplorer/'.$folder.'|'.$file.">fichier : $file : type : ". filetype($dir .'/'.$file).'</a><br>';*/
+							$list[] = $file;
+						}
+					}
+					closedir($dir_content);
+				}
 	
+			}else{
+				$this->session->setFlash('Erreur d\'url veuillez suivre les liens de navigations','error');
+				$this->redirect($this->referer);
+			}
+		}
+		if($this->request->is('POST')){
+			
+			$this->redirect($this->referer);
+		}
+		$this->set('explorer', array('file' => $list, 'folder' => $folder, 'back' => $back));
+		$this->render('explorer');
 
-
-
-	
+	}	
 }
