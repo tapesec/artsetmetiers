@@ -63,16 +63,16 @@
 			</div>
 			<?php echo $this->session->flash(); ?>
 		</div>	
+	</div>	
+	<div class="row-fluid banner_area">
+		<div class="span12 banner">
+			<?php $this->img('design/img/new_banner.jpg', array('alt' => 'Bannière du site CNAM-IT.FR')); ?>
+		</div>	
 	</div>
+
 	<div class="container-fluid">
 		
-		<div class="row-fluid banner_area">
-			<div class="span12 banner">
-
-				<?php $this->img('design/img/banner.jpg', array('alt' => 'Bannière du site Arts et Métiers IT')); ?>
-			</div>	
-		</div>
-			<div class="row-fluid">
+				<div class="row-fluid">
 				<div class="span12">
 				    <ul class="thumbnails">
     					<li class="span3">
