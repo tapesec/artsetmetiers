@@ -547,10 +547,13 @@ class BackoffController extends Controller{
 		if($this->request->is('GET')){
 			$this->layout = 'back';
 			$prev = explode('|', $folder);
-			$back = $prev[0];
-			//echo $back.'<br>';
+			$i = count($prev);
+			unset($prev[$i-1]);
+			unset($prev[$i]);
+			$back = implode('|',$prev);
 			$folder = str_replace('|','/',$folder);
 			$dir = WEBROOT.'/'.$folder;
+			$folder = str_replace('/', '|',$folder);
 			$list = array();
 			if(is_dir($dir)){
 				if($dir_content = opendir($dir)){
@@ -567,13 +570,21 @@ class BackoffController extends Controller{
 				$this->session->setFlash('Erreur d\'url veuillez suivre les liens de navigations','error');
 				$this->redirect($this->referer);
 			}
-		}
-		if($this->request->is('POST')){
-			
-			$this->redirect($this->referer);
+		}else if($this->request->is('POST')){
+			debug($folder);
+			debug($this->request->data);
+			debug($this->request->file);
+			$nfile = (!empty($this->request->file['new_file']))? $this->request->file['new_file'] : '';
+			$dest = WEBROOT.DS;
+			$folder = str_replace('|', '/', $folder);
+			//die();
+			if(move_uploaded_file($nfile['tmp_name'], $dest.$folder.DS.$nfile['name'])){
+				$this->session->setFlash('Fichier bien ajouté', 'success');
+				$this->redirect($this->referer);
+				exit();
+			}
 		}
 		$this->set('explorer', array('file' => $list, 'folder' => $folder, 'back' => $back));
 		$this->render('explorer');
-
 	}	
 }
