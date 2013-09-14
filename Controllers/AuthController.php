@@ -52,7 +52,7 @@ class AuthController extends Controller{
 						if(mail($this->request->data['use_mail'], 'Arts et Métiers - Confirmation de votre inscription', 'Bienvenue chez Arts et métiers !<br/>'.PHP_EOL.
 							'Pour confirmer votre inscription cliquez ici :'.PHP_EOL.
 							$link,
-							'From: webmaster@cnam-it.fr')){
+							'To: '.$this->request->data['use_mail'].''"\r\n".'From: webmaster@cnam-it.fr'."\r\n".'Reply-to: webmaster@cnam-it.fr'."\r\n".'X-Mailer:PHP/'.phpversion().')){
 							$this->session->setFlash('Rendez vous sur votre boite mail pour confirmer votre inscription. Pensez à vérifier vos spams', 'success');
 							$this->redirect('blog/index');
 						}else{
