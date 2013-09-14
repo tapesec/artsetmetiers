@@ -38,7 +38,7 @@ class AuthController extends Controller{
 				$tokken = str_replace('.', '', $tokken);
 				$this->request->data['use_password1'] = $tokken;
 				$this->request->data['use_password2'] = $tokken;
-				$link = 'http://www.frienddcop.com/auth/checked/'.$tokken;
+				$link = 'http://www.cnam-it.fr/auth/checked/'.$tokken;
 				$this->request->data['use_link'] = $tokken;
 				
 				if($this->request->data['use_password1'] == $this->request->data['use_password2']){
