@@ -328,4 +328,28 @@ img.img-notif {
 div#dipinput input {
 	width:100%;
 }
+div.top_explorer {
 
+}
+div.window_explorer {
+	border:1px solid rgba(0, 0, 0, 0.15);
+	/*border-radius:4px;*/
+	padding:10px;
+
+}
+div.listExplorer {
+	border:1px solid rgba(0, 0, 0, 0.15);
+	padding:5px;
+	
+}
+li.big_icone {
+	display:inline-block;
+	margin:15px;
+	text-align:center;
+}
+li.list {
+	list-style-type:none;
+}
+div.bot_explorer {
+
+}

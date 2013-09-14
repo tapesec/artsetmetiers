@@ -225,7 +225,7 @@ class AuthController extends Controller{
 		debug($_SESSION);
 		$avatar = (!empty($this->request->file['avatar']))? $this->request->file['avatar'] : '';
 		
-		if(preg_match('/[.jpg|.png|.gif]$/', $avatar['name'])
+		if(preg_match('/(.jpg)|(.png)|(.gif)$/', $avatar['name'])
 		  && $avatar['size'] <= $this->request->data['max_size']
 		  && !$avatar['error']){
 			$ext = explode('.', $avatar['name']);

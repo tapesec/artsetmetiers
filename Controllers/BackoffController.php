@@ -559,7 +559,6 @@ class BackoffController extends Controller{
 				if($dir_content = opendir($dir)){
 					while(($file = readdir($dir_content)) !== false){
 						if($file !== '.' && $file !== '..'){
-						/*echo "<a href=".BASE_URL.'/backoff/fileExplorer/'.$folder.'|'.$file.">fichier : $file : type : ". filetype($dir .'/'.$file).'</a><br>';*/
 							$list[] = $file;
 						}
 					}
@@ -584,7 +583,7 @@ class BackoffController extends Controller{
 				exit();
 			}
 		}
-		$this->set('explorer', array('file' => $list, 'folder' => $folder, 'back' => $back));
+		$this->set('explorer', array('file' => $list, 'folder' => $folder,'dir'=> $dir, 'back' => $back));
 		$this->render('explorer');
 	}	
 }
