@@ -4,7 +4,8 @@
 	$listCat = $articles[1];
 	$article = current(current($articles));
 	debug($listCat);
-	debug($article); 
+	debug($article);
+        	
 } ?>
 
 
@@ -16,11 +17,19 @@
 <div class="addArticle">
 	
 	<?php echo $this->Form->create('backoff/addArticle/'.$id= (isset($article['art_id']))? $article['art_id'] : false, array('type' => 'POST', 'name' => 'art_id', 'value' =>  $id)); ?>
-
+		
 	<?php echo $this->Form->input(array('name' => 'art_cat_id', 'type' => 'select', 'label' => 'Catégorie de l\'article', 'value' => $value = (isset($article['art_cat_id']))? $article['art_cat_id'] : '', 'list' => array($listCat))); ?>
 
 	<?php echo $this->Form->input(array('name' => 'art_title', 'type' => 'text', 'label' => 'Titre de l\'article', 'value' => $value = (isset($article['art_title']))? $article['art_title'] : '')); ?>
+
+	<?php echo $this->Form->input(array('name' => 'art_youtube',
+					'type' => 'textarea',
+					'label' => 'Code youtube',
+					'value' => $value = (isset($article['art_youtube']))? Sanitize::show($article['art_youtube']): '')); ?>
+
 <div id="emoticons" class="emoticons_area">
+
+
     						<a href="#" onclick="return false;" title=":p"><?php $this->img('design/emoticons/tongue.png');?></a>
 							<a href="#" onclick="return false;" title=":("><?php $this->img('design/emoticons/unhappy.png');?></a>
 							<a href="#" onclick="return false;" title=":D"><?php $this->img('design/emoticons/wink.png');?></a>
@@ -29,25 +38,14 @@
 						</div>
 	<?php $this->Form->input(array('name' => 'art_content', 'type' => 'textarea','value' => $value = (isset($article['art_content']))? Sanitize::show($article['art_content']) : '' , 'class' => 'markitup', 'rows' => 15, 'message' => true)); ?>
 
-	<?php $this->Form->input(array('name' => 'art_slot', 'type' => 'select', 'label' => 'Selectionnez l\'emplacement', 'value' => $value = (isset($article['art_slot']))? $article['art_slot'] : '', 'list' => array('blog' => 'blog', 'accueil' => 'accueil'), 'message' => true)); ?>
+	<?php $this->Form->input(array('name' => 'art_slot', 'type' => 'select', 'label' => 'Selectionnez l\'emplacement', 'value' => $value = (isset($article['art_slot']))? $article['art_slot'] : '', 'list' => array('blog' => 'Blog', 'accueil' => 'Accueil', 'tuto' => 'Tutoriel vidéo'), 'message' => true)); ?>
 
 	<?php $this->Form->input(array('name' => 'art_online', 'type' => 'checkbox', 'label' => 'Mettre en ligne ?', 'value' => 1, 'checked' => $checked,  'class' => 'checkbox', 'message' => true)); ?>
 
 	<?php $this->Form->end(array('type' => 'submit', 'value' => 'Valider', 'class' => 'btn btn-info submit')); ?>
 </div>
 <script type="text/javascript">
-/*
-		tinymce.init({
-			remove_linebreaks : false,
-	 		selector: "textarea",
-	 		plugins: ["code image, code"],
 
-	 		
-	        extended_valid_elements : "pre[class|name]",
-	 		toolbar:  "insertfile styleselect bold italic underline | blockquote bullist code | link image",
-	 		menu : "none"
- 		
-	});*/
    		$(document).ready(function() { 
    						
    			mySettings = {

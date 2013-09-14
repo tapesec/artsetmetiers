@@ -49,7 +49,7 @@ class AuthController extends Controller{
 						$this->Avatar->save(array('ava_url' => 'avatar/default.png', 'ava_id_user' => $use_id[0]['use_id']));
 
 						Request::$handMade = false;
-						if(mail($this->request->data['use_mail'], 'Arts et Métiers - Confirmation de votre inscription', 'Bienvenue chez Arts et métiers !<br/>'.PHP_EOL.
+						if(mail($this->request->data['use_mail'], 'Cnam-it.fr - Confirmation de votre inscription', 'Bienvenue chez Cnam-it.fr !'.PHP_EOL.
 							'Pour confirmer votre inscription cliquez ici :'.PHP_EOL.
 							$link,
 							'To: '.$this->request->data['use_mail']."\r\n".'From: webmaster@cnam-it.fr'."\r\n".'Reply-to: webmaster@cnam-it.fr'."\r\n".'X-Mailer:PHP/'.phpversion())){
