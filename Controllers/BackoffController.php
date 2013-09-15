@@ -39,7 +39,7 @@ class BackoffController extends Controller{
 		if($this->request->is('GET')){
 			$this->layout = 'back';
 			if(isset($id) && !empty($id)){
-				$data_article = $this->Article->find(array('fields' => 'art_id, art_title, art_content, art_cat_id, art_online, art_slot, art_dateM, art_dateC',
+				$data_article = $this->Article->find(array('fields' => 'art_id, art_title, art_content, art_cov, art_youtube, art_cat_id, art_online, art_slot, art_dateM, art_dateC',
 									   'where' => array('art_id' => $id)));
 				$listCat = $this->Categorie->find(array('fields' => 'cat_id, cat_name'));
 				if(!empty($data_article)){

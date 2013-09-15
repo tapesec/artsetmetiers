@@ -9,10 +9,27 @@ class VideoController extends Controller{
 	 *@return (array)$listVideo la liste des videos
 	 * */
 	public function index(){
+		$this->loadModel('Article');
 		$this->layout = 'forum';
-		$this->loadModel('Video');
-		$listVideo = $this->Video->find(array('where' => array('vid_statut' => true)));
-		$this->set('listVid', $listVideo);
+		$data = $this->Article->find(array('fields' => 'art_id,
+		       						art_title,
+								art_content,
+								art_dateC,
+								art_youtube,
+								cat_id,
+								cat_name,
+								use_id,
+							       	use_login',
+							'where' => array(
+							 	'art_slot' => 'Tutoriel vidéo',
+							 	'art_online' => true),
+							 'join' => array(
+								'type' => 'LEFT OUTER JOIN',
+								'table' => array('categories', 'users'),
+								'condition' => array('art_cat_id = cat_id',
+							       			     'art_use_id = use_id'))));
+		
+		$this->set('article', $data);
 		$this->render('index');
 	}
 }

@@ -254,11 +254,11 @@ form span[class*="info"]{
 article{
 	padding-bottom:10px;
 }
-article img[src*="http"]{
+article img {
 	float:left;
 	margin-right: 10px;
 	width:25%;
-	//height:30%;
+	height:30%;
 }
 .brand h1{
 	font-size:20px;

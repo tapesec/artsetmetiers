@@ -17,10 +17,12 @@
 <div class="addArticle">
 	
 	<?php echo $this->Form->create('backoff/addArticle/'.$id= (isset($article['art_id']))? $article['art_id'] : false, array('type' => 'POST', 'name' => 'art_id', 'value' =>  $id)); ?>
-		
+
 	<?php echo $this->Form->input(array('name' => 'art_cat_id', 'type' => 'select', 'label' => 'Catégorie de l\'article', 'value' => $value = (isset($article['art_cat_id']))? $article['art_cat_id'] : '', 'list' => array($listCat))); ?>
 
 	<?php echo $this->Form->input(array('name' => 'art_title', 'type' => 'text', 'label' => 'Titre de l\'article', 'value' => $value = (isset($article['art_title']))? $article['art_title'] : '')); ?>
+
+	<?php $this->Form->input(array('name' => 'art_cov', 'type' => 'text', 'label' => 'Couverture (pour les tutos vidéos)', 'value' => $value = (isset($article['art_cov']))? $article['art_cov'] : '')); ?>
 
 	<?php echo $this->Form->input(array('name' => 'art_youtube',
 					'type' => 'textarea',
