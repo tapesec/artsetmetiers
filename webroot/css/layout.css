@@ -100,6 +100,21 @@ div.blog_wall article:last-child{
 }
 
 /**
+ *------------------------------- Vidéo -----------------------------------------------
+ * */
+
+div.video_wall article {
+	border:1px solid rgba(0, 0, 0, 0.15);
+	box-shadow: 1px 1px 7px 2px lightgrey;
+	padding:5px;
+
+}
+img.cover {
+	width: 100%;
+}
+/*div.video_wall article */
+
+/**
 * -------------------------------- Forums ----------------------------------------------
 **/
 
@@ -254,7 +269,7 @@ form span[class*="info"]{
 article{
 	padding-bottom:10px;
 }
-article img {
+article img.blog {
 	float:left;
 	margin-right: 10px;
 	width:25%;
