@@ -113,10 +113,10 @@ div.video_wall article {
 img.cover {
 	width: 100%;
 }
-div[class*="video-tuile"] article {
+div[class*="video-tuile"] article { 
 	min-height:350px;
 	max-height:350px;
-	
+	margin:5px 0 20px 0;
 }
 div.cover_hover {
 	position:absolute;

@@ -35,7 +35,7 @@
 	<div class="row-fluid">
 		<div class="span12">
 			<?php $data['pages'] = $this->layoutLoad('Blog', 'page'); ?>
-		    <div class="navbar">
+		    <div class="navbar navbar-static-top">
 			    <div class="navbar-inner">
 		    		<a class="brand" href="#"><h1><?php echo ucfirst($this->request->controller); ?></h1></a>
 		    		<ul class="nav">
