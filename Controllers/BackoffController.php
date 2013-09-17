@@ -586,7 +586,7 @@ class BackoffController extends Controller{
 			if(move_uploaded_file($nfile['tmp_name'], $dest.$folder.DS.$nfile['name'])){
 				$this->session->setFlash('Fichier bien ajouté', 'success');
 				$this->redirect($this->referer);
-				exit();
+				
 			}
 		}
 		$this->set('explorer', array('file' => $list, 'folder' => $folder,'dir'=> $dir, 'back' => $back));

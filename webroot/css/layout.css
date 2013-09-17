@@ -113,8 +113,16 @@ div.video_wall article {
 img.cover {
 	width: 100%;
 }
+div[class*="video-tuile"] article {
+	min-height:350px;
+	max-height:350px;
+	
+}
 div.cover_hover {
-	position:absolute;	
+	position:absolute;
+	top:30px;
+	left:5px;
+	width:100%;	
 }
 div.cover_hover p {
 	text-align:center;
@@ -131,6 +139,12 @@ div.cover_hover p.level {
 	font-size:2em;
 	font-weight:bold;
 	color:#49AFCD;
+}
+div.cover_hover img.button_play {
+	display:block;
+	margin:5% auto 30% auto;
+	width:30%;
+	text-align:center;
 }
 /*div.video_wall article */
 
