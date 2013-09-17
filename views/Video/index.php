@@ -1,22 +1,28 @@
 <?php debug($article); ?>
 
-<div class="blog_wall">
+<div class="video_wall">
 <?php debug($article); ?>
 
 <?php foreach ($article as $k => $v): ?>
-	
-	<div itemscope itemtype="http://schema.org/Article" class="span6">
+		
+	<div data-cat="<?php echo $v['cat_name']; ?>" itemscope itemtype="http://schema.org/Article" class="span3">
 	<article>
-	<h2 itemprop="name" class="text-success"><?php echo $v['art_title']; ?></h2>
-	<div><small>Par <a href="<?php echo BASE_URL.'/parcours/voir/'.$v['use_id']; ?>"><strong><span itemprop="author" itemtype="http://schema.org/Person"><?php echo $v['use_login']; ?></span></strong></a>
-	 <span itemprop="datePublished" datetime="<?php echo $v['art_dateC']; ?>" > <?php echo dateHelper::fr($v['art_dateC'], array('delay' => true)); ?></span></small>
+	<img class="cover" src="<?php echo BASE_URL.$v['art_cov']; ?>">
+	<h4 itemprop="name" class="text-success"><?php echo $v['art_title']; ?></h4>
+	<p itemprop="articleBody">
+	<?php echo $this->Truncate->fragment(Sanitize::show($this->Markitup->bbcodeParse($v['art_content'])), 40); ?>
+	</p>
+	<div class="cover_hover"><img class="button_play" src="<?php //echo BASE_URL.'/design/img/button_play.png'; ?>">
+		<?php $this->img('/design/img/'); ?>	
+		<p class="category"><?php echo $v['cat_name']; ?></p>
+		<p class="date"><?php echo DateHelper::fr($v['art_dateC']); ?></p>	
+		<p class="level"><?php echo ucfirst($v['art_level']); ?></p>
 	</div>
-	<p itemprop="articleBody"><?php echo $this->Truncate->fragment(Sanitize::show($this->Markitup->bbcodeParse($v['art_content'])), 40); ?></p>
 	</article>
-	<div class="clearfix"></div>
-
 	</div>
 	
-<?php endforeach; ?> 
+<?php endforeach; ?>
+
+
 </div>
 

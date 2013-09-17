@@ -32,22 +32,28 @@ class BackoffController extends Controller{
 	*@return une page contenant un outil d'édition de texte
 	**/
 	public function addArticle($id=null){
-		
 		$this->loadModel('Article');
 		$this->loadModel('Categorie');
 
 		if($this->request->is('GET')){
 			$this->layout = 'back';
 			if(isset($id) && !empty($id)){
-				$data_article = $this->Article->find(array('fields' => 'art_id, art_title, art_content, art_cov, art_youtube, art_cat_id, art_online, art_slot, art_dateM, art_dateC',
+				$data_article = $this->Article->find(array('fields' => 'art_id, art_title, art_content, art_cov, art_youtube, art_level, art_cat_id, art_online, art_slot, art_dateM, art_dateC',
 									   'where' => array('art_id' => $id)));
-				$listCat = $this->Categorie->find(array('fields' => 'cat_id, cat_name'));
+				$listCatBlog = $this->Categorie->find(array('fields' => 'cat_id, cat_name',
+										'where' => array('cat_type' => 'blog')));
+				$listCatTuto = $this->Categorie->find(array('fields' => 'cat_id, cat_name',
+										'where' => array('cat_type' => 'tutoriel')));
 				if(!empty($data_article)){
-					$this->set('articles', array($data_article, $listCat));
+					$this->set('articles', array($data_article, $listCatBlog, $listCatTuto));
 				}	
 			}else{
-				$listCat = $this->Categorie->find(array('fields' => 'cat_id, cat_name'));
-				$this->set('listCat', $listCat);
+				$listCatBlog = $this->Categorie->find(array('fields' => 'cat_id, cat_name',
+										'where' => array('cat_type' => 'blog')));
+				$listCatTuto = $this->Categorie->find(array('fields' => 'cat_id, cat_name',
+										'where' => array('cat_type' => 'tutoriel')));
+
+				$this->set('listCat', array('listCat_blog' => $listCatBlog, 'listCat_tuto' => $listCatTuto));
 			}
 		}elseif($this->request->is('PUT')){
 			$this->request->data = Sanitize::clean($this->request->data);
@@ -230,16 +236,16 @@ class BackoffController extends Controller{
 				$this->session->setFlash('Catégorie bien modifiée !', 'success');
 				$this->redirect('backoff/listCat');
 			}else{
-				$this->session->setFlash('Erreur de modification !');
+				$this->session->setFlash('Erreur de modification !', 'success');
 				$this->redirect('backoff/listCat');
 			}
 
 		}elseif($this->request->is('POST')){
 			if($this->Categorie->save($this->request->data)){
-				$this->session->setFlash('Catégorie bien ajouté !');
+				$this->session->setFlash('Catégorie bien ajouté !', 'success');
 				$this->redirect($this->referer);
 			}else{
-				$this->session->setFlash('Erreur de sauvegarde !');
+				$this->session->setFlash('Erreur de sauvegarde !', 'error');
 			}
 			
 		}

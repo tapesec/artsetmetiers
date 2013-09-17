@@ -107,10 +107,30 @@ div.video_wall article {
 	border:1px solid rgba(0, 0, 0, 0.15);
 	box-shadow: 1px 1px 7px 2px lightgrey;
 	padding:5px;
+	position:relative;
 
 }
 img.cover {
 	width: 100%;
+}
+div.cover_hover {
+	position:absolute;	
+}
+div.cover_hover p {
+	text-align:center;
+}
+div.cover_hover p.date{
+	font-size:1.8em;
+	font-weight:bold;
+}
+div.cover_hover p.category {
+	font-size:3em;
+	font-weight:bold;
+}
+div.cover_hover p.level {
+	font-size:2em;
+	font-weight:bold;
+	color:#49AFCD;
 }
 /*div.video_wall article */
 
@@ -167,6 +187,10 @@ div.wall_reply span[class*="compteur_post"]{
 div.addSubject textarea{
 	width:100%;
 }
+/*
+ *---------------------------------------- Backoff Addrticle -------------------------------------------
+ * */
+
 div.addArticle textarea{
 	width:80%;
 }
