@@ -118,7 +118,7 @@ class AuthController extends Controller{
 			$this->loadModel('User');
 			$password = crypt($this->request->data['use_password1'], 'tapesec');
 			$password = str_replace('.', '', $password);
-			echo $password;
+			//echo $password;
 
 			$check_user = $this->User->find(array('join' => array('type' => 'LEFT OUTER JOIN',
 												  				  'table' => 'avatars',

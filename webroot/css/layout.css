@@ -110,6 +110,9 @@ div.video_wall article {
 	position:relative;
 
 }
+div[class*="video-tuile"] {
+	border-bottom:5px solid lightgrey;
+}
 img.cover {
 	width: 100%;
 }
@@ -146,7 +149,12 @@ div.cover_hover img.button_play {
 	width:30%;
 	text-align:center;
 }
-/*div.video_wall article */
+
+iframe.video-window {
+	margin:auto;
+	display:block;
+	margin-bottom:30px;
+}
 
 /**
 * -------------------------------- Forums ----------------------------------------------
