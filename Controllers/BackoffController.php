@@ -7,8 +7,7 @@ class BackoffController extends Controller{
 	*@return le menu du panneau d'administration du back office
 	**/
 	public function index(){
-		$this->reloadRss();
-		$this->layout='back';
+				$this->layout='back';
 		$this->loadModel('Page');
 		$data = $this->Page->find(array('fields' => 'pag_name, pag_url, pag_id, pag_src',
 								'where' => array('pag_type' => 'back'),
@@ -66,9 +65,11 @@ class BackoffController extends Controller{
 			$this->request->data['art_online'] = (isset($this->request->data['art_online']))? $this->request->data['art_online'] : 0;
 			if($this->Article->update($this->request->data, array('where' => array(
 											'art_id' => $id)))){
-				//die();
 				$this->session->setFlash('Article bien modifié !', 'success');
+				$this->reloadRss();
+
 			}
+			
 			$this->redirect('backoff/listArticle');
 
 			
@@ -80,6 +81,7 @@ class BackoffController extends Controller{
 			$this->request->data['art_use_id'] = Auth::$session['use_id'];
 			if($this->Article->save($this->request->data)){
 				$this->session->setFlash('Article bien enregistré !', 'success');
+				$this->reloadRss();
 				$this->redirect('backoff/index');
 			}else{
 				die('haaaanan');
