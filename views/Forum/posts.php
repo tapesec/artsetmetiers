@@ -105,3 +105,9 @@ $post = current($posts['post']);
 	</table>
 	<?php echo $this->paginator('forum/posts/'.$posts['post'][0]['sub_id'], 'pagination'); ?>
 </div>
+
+<script>
+	$(document).ready(function(){
+		$('#bannerInfo').text('<?php echo $post['sub_title']; ?>');
+	});
+</script>

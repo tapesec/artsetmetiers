@@ -1,9 +1,9 @@
 <?php debug($visite); ?>
 <div itemscope itemtype="http://schema.org/Person">
 <div class="row-fluid">
-	<div class="span12">
+<!--	<div class="span12">
 		<h2 itemprop="name" class="text-center">Carte de visite</h2>
-	</div>
+	</div>-->
 </div>
 <div class="row-fluid">
 	<div class="span3 text-center btn-info btn config_visite_button"><small>
@@ -219,3 +219,9 @@
 	
 </div>
 </div>
+
+<script>
+	$(document).ready(function(){
+		$('#bannerInfo').text('Votre carte de visite');
+	});
+</script>

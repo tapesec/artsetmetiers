@@ -36,3 +36,8 @@
 		</tr>
 	<?php endforeach; ?>
 </table>
+<script>
+	$(document).ready(function(){
+		$('#bannerInfo').text('Le Forum');
+	});
+</script>

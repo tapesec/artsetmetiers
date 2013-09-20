@@ -7,7 +7,6 @@
 		<?php $art = $wall['article'][0]; ?>
 	
 		<article>
-		<h1 class="text-success text-center"><?php echo $art['art_title']; ?></h1>
 		<iframe class="video-window span10 offset1" height="537" src="<?php echo $art['art_youtube']; ?>" frameborder="0" allowfullscreen></iframe>	<div class="span10 offset1">
 
 		<div><small>Par <a href="<?php echo BASE_URL.'/parcours/voir/'.$art['use_id']; ?>">
@@ -109,3 +108,9 @@
 		</div>
 	</div>
 </div>
+
+<script>
+	$(document).ready(function(){
+		$('#bannerInfo').text('<?php echo $art['art_title']; ?>');
+	});
+</script>

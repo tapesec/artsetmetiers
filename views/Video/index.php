@@ -44,6 +44,9 @@ foreach ($article['video'] as $k => $v): ?>
 
 <script>
 $(document).ready(function(){
+
+	$('#bannerInfo').text('Tutoriels vidéo');
+
 	$('div[class*="cover_hover"]').css('opacity', 0);
 	$('div#zone-tuile').on('mouseenter', '.video-tuile', function(){
 		$('.video-tuile').css('opacity', 0.3);

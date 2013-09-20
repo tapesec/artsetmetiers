@@ -503,3 +503,9 @@
 	</div>
 
 </div>
+
+<script>
+	$(document).ready(function(){
+		$('#bannerInfo').text('Panneau de configuration');
+	});
+</script>

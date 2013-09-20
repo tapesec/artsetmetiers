@@ -78,7 +78,9 @@
 	</div>
 	<div class="row-fluid banner_area">
 		<div class="span12 banner">
-			<?php $this->img('design/img/banner_reduite.jpg', array('alt' => 'Bannière du site CNAM-IT.FR')); ?>
+			<?php $this->img('design/img/bannertestS2.jpg', array('alt' => 'Bannière du site CNAM-IT.FR')); ?>
+			<p class="banner-info" id="bannerInfo"></p>
+
 		</div>	
 	</div>
 	<div class="container-fluid">

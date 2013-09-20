@@ -272,7 +272,19 @@ div.syntaxhighlighter table{
 }
 div[class*="banner"]{
 	background-color: white;
+	position:relative;
 	
+}
+p[class*="banner-info"] {
+	position:absolute;
+	top:45%;
+	left:48.93617021276595%;
+	width:49%;
+	background-color:none;
+	font-size:2em;
+	font-style:italic;
+	line-height:1em;
+	text-align:center;
 }
 div[class*="banner_area"]{
 	margin-bottom: 20px;

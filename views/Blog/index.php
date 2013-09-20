@@ -23,4 +23,10 @@
 <?php endforeach; ?> 
 </div>
 <?php echo $this->paginator('blog/index', 'pagination'); ?>
-<?php //debug(); ?>
+<script>
+	$(document).ready(
+		function(){
+			$('#bannerInfo').text('Le Blog');	
+		}	
+	);	
+</script>
