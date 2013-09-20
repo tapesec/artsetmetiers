@@ -19,6 +19,7 @@
 	<?php echo $this->link('javascript', 'style'); ?>
 	<?php echo $this->link('javascript', 'plugs'); ?>
 	<?php echo $this->link('javascript', 'bootstrap.min'); ?>
+	<link rel="alternate" type="application/rss+xml" title="Le flux rss de cnam-it.fr" href="http://dev.cnam-it.fr/webroot/rss.xml">
 	<script>
   		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
  		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

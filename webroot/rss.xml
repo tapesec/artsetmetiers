@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+			<rss version="2.0">
+			<channel>
+			<title>Le Blog de Cnam-it.fr</title>
+			<link>http://www.cnam-it.fr/blog</link>
+			<description>Le flux RSS du site CNAM-IT.fr, le site pour les étudiants au CNAM en informatique</description>
+			<ttl>1</ttl>
+
+			
+			<item>
+				<title><![CDATA[Testons le retour à la ligne avec truc]]></title>
+				<link>http://www.cnam-it.fr/video/voir30</link>
+				<description><![CDATA[<p>On va tester dans cette vidéo bidon un retour à la ligne, normalement, ca ne doit pas poser problème mais si c'est le cas on mettra en place le laborieux systeme de ligne à ligne. Enjoy ! <img alt=":)" src="/artsetmetiers/webroot/img/design/emoticons/smile.png" /></p>]]></description>
+				<author>lionel.dupouy@gmail.com</author>
+				<category><![CDATA[Linux]]></category>
+				<guid isPermaLink="true"><![CDATA[1379431680]]></guid>
+				<pubDate>Tue, 17 Sep 2013 17:28:00 +0200</pubDate>
+				<source>http://www.cnam-it.fr/blog</source>
+			</item>	
+		
+			<item>
+				<title><![CDATA[Wheel php (présentation)]]></title>
+				<link>http://www.cnam-it.fr/video/voir29</link>
+				<description><![CDATA[<p>Voici la premiere vidéo d'une série visant à vous présenter mon framework maison développé dans le cadre du cours NFA021 développement web (3). <br />
+Je me suis inspiré de la syntaxe et de l'architecture de cakephp en moins poussé quand même mais accessible à tous. J'attends avec impatience vos premieres impressions.</p>]]></description>
+				<author>lionel.dupouy@gmail.com</author>
+				<category><![CDATA[Wheel PHP]]></category>
+				<guid isPermaLink="true"><![CDATA[1379431140]]></guid>
+				<pubDate>Tue, 17 Sep 2013 17:19:00 +0200</pubDate>
+				<source>http://www.cnam-it.fr/blog</source>
+			</item>	
+		
+			<item>
+				<title><![CDATA[Une vidéo essai]]></title>
+				<link>http://www.cnam-it.fr/video/voir28</link>
+				<description><![CDATA[<p>Une nouvelle vidéo de test je pense que j'ai trouver une solution pour standardisé la taille des tuiles vidéo grace à la propriété min et max-width</p>]]></description>
+				<author>lionel.dupouy@gmail.com</author>
+				<category><![CDATA[PHP]]></category>
+				<guid isPermaLink="true"><![CDATA[1379430720]]></guid>
+				<pubDate>Tue, 17 Sep 2013 17:12:00 +0200</pubDate>
+				<source>http://www.cnam-it.fr/blog</source>
+			</item>	
+		
+			<item>
+				<title><![CDATA[Un titre un petit peu long pour voir des choses]]></title>
+				<link>http://www.cnam-it.fr/video/voir26</link>
+				<description><![CDATA[<p>Une vidéo sympa de norman sur Google criante de vérité !<br />
+J'aime beaucoup parce c'est comme ca nous allons apprendre plein de chose sur la programmation. Et peut etre sur le secret des donuts.</p>]]></description>
+				<author>lionel.dupouy@gmail.com</author>
+				<category><![CDATA[PHP]]></category>
+				<guid isPermaLink="true"><![CDATA[1379244900]]></guid>
+				<pubDate>Sun, 15 Sep 2013 13:35:00 +0200</pubDate>
+				<source>http://www.cnam-it.fr/blog</source>
+			</item>	
+		
+			<item>
+				<title><![CDATA[Maintenant j'ai Google]]></title>
+				<link>http://www.cnam-it.fr/video/voir25</link>
+				<description><![CDATA[<p>Une vidéo sympa de norman sur Google criante de vérité !<br />
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vestibulum, libero id ullamcorper tempus, metus enim pulvinar metus, sed eleifend dolor justo ac odio. Ut posuere vitae leo vel molestie. Nullam interdum pharetra ullamcorper. Phasellus imperdiet adipiscing vestibulum. Duis at ligula placerat, adipiscing lectus vel, luctus massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin varius massa at tortor venenatis, a sollicitudin diam luctus. Proin consectetur mattis erat ut faucibus. Aenean accumsan lacus urna, vitae adipiscing augue facilisis vitae. In hac habitasse platea dictumst. Vestibulum a leo consectetur, aliquam orci at, tristique elit. Phasellus cursus tempor sapien, eget eleifend risus sollicitudin eget.</p>]]></description>
+				<author>lionel.dupouy@gmail.com</author>
+				<category><![CDATA[PHP]]></category>
+				<guid isPermaLink="true"><![CDATA[1379235540]]></guid>
+				<pubDate>Sun, 15 Sep 2013 10:59:00 +0200</pubDate>
+				<source>http://www.cnam-it.fr/blog</source>
+			</item>	
+		
+			<item>
+				<title><![CDATA[Inscription pour la rentrée de septembre]]></title>
+				<link>http://www.cnam-it.fr/video/voir21</link>
+				<description><![CDATA[<p><img class="img-polaroid blog" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSOWgTY2ThTdaIOlDbVyBb8MtxZMADKilXjiuxctXpJhVobZgUt_g" alt="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSOWgTY2ThTdaIOlDbVyBb8MtxZMADKilXjiuxctXpJhVobZgUt_g" /><br />
+Bonjour les Cnamiens,</p><p>La rentrée de l'année 2013 / 2014 se prépare des maintenant.<br />
+Vous pouvez accéder au catalogue des formations dispensées par le CNAM en informatique à <a href="http://catalogues-formation.cnam.fr/par-metier/informatique-437728.kjsp?RH=1305535539880">cette adresse</a>. Pour rappel, la particularité du CNAM est que les cours peuvent être suivi à votre rythme, le soir (à partir de 18h généralement), le weekend, ou à distance (FOD) et les Unités d'enseignements peuvent être validées sans limite de temps sauf cas spécifique.<br />
+Vous pouvez décider de suivre tous les UE qui mène à un diplôme dans l'ordre que vous voulez, choisir une ou plusieurs UE par semestre, certaines en présentiel, d'autres à distance.</p><p>Les dates pour la rentrée (pour Paris):<br />
+En septembre-octobre :<br />
+Inscription à Paris : du 9 au 21 septembre<br />
+Portes ouvertes : 12 au 14 septembre et du 19 au 21 septembre.<br />
+Horaires : jeudi et vendredi de 13h à 20h; le samedi de 10h à 18h<br />
+Accès : 292 rue Saint-Martin, Paris 3e.</p>]]></description>
+				<author>lionel.dupouy@gmail.com</author>
+				<category><![CDATA[CNAM]]></category>
+				<guid isPermaLink="true"><![CDATA[1373012640]]></guid>
+				<pubDate>Fri, 05 Jul 2013 10:24:00 +0200</pubDate>
+				<source>http://www.cnam-it.fr/blog</source>
+			</item>	
+		
+			<item>
+				<title><![CDATA[QWANT un moteur de recherche Made in France !]]></title>
+				<link>http://www.cnam-it.fr/video/voir20</link>
+				<description><![CDATA[<p><img class="img-polaroid blog" src="http://t0.gstatic.com/images?q=tbn:ANd9GcSX40AagIT75OkZ7CL32MSo_rg8ixOMpjciC2fMpbqZjz3twZlvQw" alt="http://t0.gstatic.com/images?q=tbn:ANd9GcSX40AagIT75OkZ7CL32MSo_rg8ixOMpjciC2fMpbqZjz3twZlvQw" /><br />
+Qwant est un moteur de recherche français fondé par Jean-Manuel Rozan, Éric Leandri et la société Pertimm spécialisée dans la conception de moteurs de recherche.</p><p>Un nouveau moteur concurrent de Google ? mais vous êtes fou madame Viala ! Pas du tout, QWANT ne cherche pas à détrôner Google, Bing Yahoo et autres mastodonte du web, d'ailleurs cela serait de la folie.<br />
+Non, QWANT propose autre chose, en tapant un critère de recherche vous ne verrez pas s'afficher 1 mais 5 murs de résultats ou (SERP). Chaque mur pour un thème WEB, actualités, social, shopping.</p><p>Le site lancé le 16 février 2013 est encore en version Béta mais déjà une polémique existe quand à la pertinence de ce moteur; il serait en effet soupçonné de ne faire que récupérer les résultats de recherche de Bing.<br />
+Qwant a cependant quelques atouts non négligeables il permet entre autres aux usagers de contacter directement les auteurs de messages sur Facebook, Twitter et google +, de plus, des recherches spécialisées par thèmes permettent d'obtenir des résultats relativement précis et qui en surprendront plus d'un.</p><p>Qwant est pour le moment disponible en 15 langues.</p>]]></description>
+				<author>lionel.dupouy@gmail.com</author>
+				<category><![CDATA[Actualités]]></category>
+				<guid isPermaLink="true"><![CDATA[1372967820]]></guid>
+				<pubDate>Thu, 04 Jul 2013 21:57:00 +0200</pubDate>
+				<source>http://www.cnam-it.fr/blog</source>
+			</item>	
+		
+			<item>
+				<title><![CDATA[La guerre des BOM]]></title>
+				<link>http://www.cnam-it.fr/video/voir19</link>
+				<description><![CDATA[<p><img class="img-polaroid blog" src="http://www.w3.org/International/questions/images/bom.png" alt="http://www.w3.org/International/questions/images/bom.png" /><br />
+Bonjour les cnamiens aujourd'hui je voulais faire un court article sur l'encodage de caractère, l'UTF-8 et .. le BOM !<br />
+Quand vous utilisez beaucoup de scripts avec des includes / require vous avez beau ne pas avoir de problème d'encodage apparent il peut quand même subvenir des soucis de &quot;white space qui foutra en l'air votre mise en page web.</p><p>Les white-spaces d'encodage (à ne pas confondre avec des white-spaces dû à deux élements html et de la propriété display inline-block par exemple) peuvent être généré à cause d'un encodage UTF-8 avec BOM. Le BOM (Byte Order Mark) permet de marquer la fin d'une chaine de caractère Unicode. Quand il est mal interprété il fait apparaitre des caractères incompréhensible tel &quot;ï»¿ï»¿ï»¿&quot;.</p><p>Pour éviter ce genre de problème il est préférable d'utiliser un éditeur de texte qui permet d'encoder un document en UTF-8 (sans BOM) tel notepad++.<br />
+J'utilise personnellement sublime text2 et cet éditeur utilise l'utf-8 avec BOM. Si vous ne voulez pas vous priver de votre éditeur préféré il existe un petit soft qui permet de parser le dossier de votre choix et de détecter tous les BOM se trouvant dans vos documents et de les retirer.</p><p>Voici le lien : <a href="http://hidalgoemmanuel.info/archives/delete-tag-utf8-bom-win.exe">delete-tag-utf8-bom-win.exe</a></p><p>A l'issu de l'opération un petit journal vous énumère tous les fichiers ou des BOM ont été trouvés et retirés.</p><p>Voilà j’espère que ça servira à quelqu'un.</p><p>Bon dev <img alt=":)" src="/artsetmetiers/webroot/img/design/emoticons/smile.png" /></p>]]></description>
+				<author>lionel.dupouy@gmail.com</author>
+				<category><![CDATA[PHP]]></category>
+				<guid isPermaLink="true"><![CDATA[1372884180]]></guid>
+				<pubDate>Wed, 03 Jul 2013 22:43:00 +0200</pubDate>
+				<source>http://www.cnam-it.fr/blog</source>
+			</item>	
+		
+			<item>
+				<title><![CDATA[Wheel PhP les méthodes de la class Model]]></title>
+				<link>http://www.cnam-it.fr/video/voir16</link>
+				<description><![CDATA[<p><img class="img-polaroid blog" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSk_AaRy3I7FiAIqvJrfOBfzklaflOhdJxK8Dt761TfUnCR4Mp7" alt="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSk_AaRy3I7FiAIqvJrfOBfzklaflOhdJxK8Dt761TfUnCR4Mp7" /><br />
+Voyons à présent dans cet article comment utiliser les fonctionnalités &quot;CRUD&quot; de toute application php.<br />
+Considérons une table mysql &quot;articles&quot; qui dispose de champs 'art_id', 'art_titre', 'art_content'.<br />
+Dans vos applications Wheel PhP il existe une convention de nommage de vos tables, celles ci doivent toutes être écrites au pluriel, de plus chaque nom de champ doit être préfixé par les trois premières lettres de la table.</p><p>Nous allons créer dans un contrôleur &quot;Blog&quot; une vue &quot;liste&quot; pour afficher tous les articles.<br />
+Créeons d'abord le contrôleur Blog dans le dossier Controllers/BlogController.php.<br />
+<pre class="brush: php;  toolbar: false;"><br />
+&lt;?php class BlogController extends Controller{<br />
+//Création d'une action d'affichage de tous les articles.<br />
+  public function liste(){<br />
+    $this-&gt;loadModel('Article'); //le model doit toujours commencer par une majuscule et toujours au singulier<br />
+    $liste_article = $this-&gt;Article-&gt;find(); //cette simple méthode find récupère toutes les données du model Article.<br />
+    $this-&gt;set('liste', $liste_article); //on crée un tableau liste contenant toutes les données de $liste_article.<br />
+    $this-&gt;render('liste'); //on renvoie tout à la vue nommé liste<br />
+  }<br />
+}<br />
+</pre><br />
+Voici ci-dessus la façon la plus simpliste de récupérer les données d'une table. Il reste à créer le model Article qui doit hérité de la classe Model.<br />
+<pre class="brush: php;  toolbar: false;"><br />
+  &lt;?php <br />
+  Class Article extends Model{<br />
+/*Cette classe doit être écrit avec la première lettre en majuscule et au singulier<br />
+contrairement à Mysql où articles doit être écrit au singulier et au pluriel.<br />
+C'est une convention de nommage de Wheel PhP.*/<br />
+  }<br />
+  ?&gt;<br />
+</pre><br />
+C'est tout ce qu'il y a à faire au niveau du model. Simple non ?</p><p>Regardons à présent comment afficher dans la vue &quot;liste&quot; les données récuperer en BDD et apres passage dans le controller.<br />
+<pre class="brush: php;  toolbar: false;"><br />
+&lt;?php<br />
+//Nous avons donc un array $liste<br />
+  foreach($liste as $k =&gt; $v){<br />
+    echo '&lt;h1&gt;'.$v&#91;'art_titre'&#93;.'&lt;/h1&gt;';<br />
+    echo '&lt;p&gt;'.$v&#91;'art_content'&#93;.'&lt;/p&gt;'; <br />
+  }<br />
+</pre><br />
+C'est tout, c'est simple.<br />
+Voyons à présent en détail la méthode Controller::find() et tout ces paramètres :</p><p><pre class="brush: php;  toolbar: false;"><br />
+//toujours avec le model Article<br />
+$data = $this-&gt;Article-&gt;find(array('fields' =&gt; 'champ1, champ2, champ3 etc..',<br />
+                                   'where' =&gt; array('champ1' =&gt; 'tel valeur', 'champ2' =&gt; 'tel valeur'));<br />
+//le paramètre fields permet de sélectionner uniquement certaines champs<br />
+//le paramàtre where permet de rajouter des conditions sélectives<br />
+</pre><br />
+Regardons à présent les jointures :<br />
+<pre class="brush: php;  toolbar: false;"><br />
+/*considérons une jointure avec une table catégorie,<br />
+il n'y a pas besoin dans ce cas de charger le modèle catégorie <br />
+mais uniquement le modèle d'où part la requête.*/<br />
+$this-&gt;loadModel('Article');<br />
+$data = $this-&gt;Article-&gt;find(array('join' =&gt; array(<br />
+                                     'type' =&gt; 'LEFT OUTER JOIN',<br />
+                                     'table' =&gt; 'Catégorie',<br />
+                                     'condition' =&gt; 'art_cat_id = cat_id),<br />
+                                   'where' =&gt; array('cat_id' =&gt; 1)));<br />
+</pre></p>]]></description>
+				<author>lionel.dupouy@gmail.com</author>
+				<category><![CDATA[Wheel PHP]]></category>
+				<guid isPermaLink="true"><![CDATA[1371653160]]></guid>
+				<pubDate>Wed, 19 Jun 2013 16:46:00 +0200</pubDate>
+				<source>http://www.cnam-it.fr/blog</source>
+			</item>	
+		
+			<item>
+				<title><![CDATA[Wheel PHP un framework agile]]></title>
+				<link>http://www.cnam-it.fr/video/voir13</link>
+				<description><![CDATA[<p><img class="img-polaroid blog" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSk_AaRy3I7FiAIqvJrfOBfzklaflOhdJxK8Dt761TfUnCR4Mp7" alt="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSk_AaRy3I7FiAIqvJrfOBfzklaflOhdJxK8Dt761TfUnCR4Mp7" /></p><p>Wheel PhP est un petit framework &quot;Home made&quot;, que j'ai développé à l'occasion du projet de fin d'études NFA021 du CNAM.</p><p>Ce Framework utilise PhP 5.3 et respecte le modèle MVC (Model Vue Controller). Dans la série d'article qui vont suivre, je tacherai d'expliquer son fonctionnement et de détailler tel une document ces méthodes et ses classes.</p><p>Le framework est composé des dossiers suivants :<br />
+<strong>Components/</strong>  se trouve les composants utile pour le fonctionnement du site (actuellement un seul composant disponible Auth)<br />
+<strong>config/</strong>  se trouve la classe Config.php à configuré pour votre projet<br />
+<strong>Controllers/</strong>  C'est dans ce dossier que vous placerez tous les controllers de votre futur projet<br />
+<strong>core/</strong>  Le cœur du framework vous n'avez jamais à intervenir dedans<br />
+<strong>doc/</strong> Le dossier dans lequel vous placerez tous les éléments de documentation de votre projet<br />
+<strong>Helpers/</strong>  Contient plusieurs classes utilitaires pour vos projet, vous placerez dedans tous les nouveaux helpers que vous aurez développé en plus de ceux fourni nativement<br />
+<strong>Models/</strong>  C'est ici que vous placerez tous vos model pour vos projets<br />
+<strong>views/</strong>  Les vues de vos projets<br />
+<strong>webroot/</strong>  C'est le seul dossier accessible par les utilisateurs<br />
+.htaccess</p><p>Vous pouvez accéder à la première page de votre application par l'url www.monsite.com/demo/index ou tout simplement www.monsite.com. En effet Wheel est configuré par défaut pour appeler cette adresse comme page d'accueil (voir Config.php plus loin).</p><p>Voyons de plus près à présent le mécanisme de fonctionnement.<br />
+Tout d'abord dans Controllers/DemoController.php vous trouverez le code suivant :<br />
+<pre class="brush: php;  toolbar: false;"><br />
+class DemoController extends Controller{</p><p>   public function index(){<br />
+      $this-&gt;layout = 'default';<br />
+      $this-&gt;render('index');<br />
+   }<br />
+}</pre><br />
+Dans une architecture type MVC le contrôleur est composé de plusieurs méthode ou action tel que index dans l'exemple ci dessus. <br />
+Cette action charge d'abord un layout 'default' puis renverra avec la méthode Controller::render() une vue (index) pour l'exemple.</p><p>Dans views/layouts/default.php se trouve donc le layout utilisé dans notre action index :<br />
+<pre class="brush: php;  toolbar: false;"><br />
+&lt;!DOCTYPE&gt;<br />
+&lt;html&gt;<br />
+&lt;head&gt;<br />
+	&lt;meta charset=&quot;UTF-8&quot;&gt;<br />
+	&lt;title&gt;Wheel PhP, ne réinventé pas la roue&lt;/title&gt;<br />
+	echo $this-&gt;link('css', 'bootstrap.min'); &lt;!-- feuille de style pour bootstrap à disposer à votre convenance--&gt;<br />
+	echo $this-&gt;link('css', 'default');  &lt;!-- feuille de style css d'exemple --&gt;<br />
+	echo $this-&gt;link('javascript', 'modernizer');  &lt;!-- modernizer inclus dans le framework --&gt;<br />
+        echo $this-&gt;link('javascript', 'default'); ?&gt; &lt;!-- feuille js d'exemple --&gt;<br />
+	echo $this-&gt;link('javascript', 'bootstrap.min'); ?&gt; &lt;!-- feuille js pour bootstrap--&gt;<br />
+&lt;/head&gt;<br />
+&lt;body&gt;<br />
+	&lt;h1&gt;Wheel PhP, ne réinventez pas la roue !&lt;/h1&gt;<br />
+	&lt;p&gt;Voici le layout par défaut du framework.&lt;/p&gt;<br />
+	<br />
+	echo $content_for_layout; &lt;!-- cette variable contient la vue par exemple index.php --&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;<br />
+</pre><br />
+Notez les méthodes link en en-têtes de page pour appeler les css et javascript de la page nous y reviendrons plus tard.<br />
+Ce qu'il faut retenir ici, c'est la ligne :<br />
+<pre class="brush: php;  toolbar: false;"> echo $content_for_layout;</pre><br />
+Comme le dit le commentaire chacun de vos layouts doivent posséder cette ligne pour inclure les différentes vues appeler par les actions de vos contrôleurs.<br />
+Regardons à présent la ligne :<br />
+<pre class="brush: php;  toolbar: false;">&lt;?php $this-&gt;render('index'); ?&gt;</pre><br />
+Cette ligne demande d'afficher la vue &quot;index.php&quot; dans le layout default.php à la place de la variable content_for_layout que nous venons de voir.<br />
+Voici cette vue index qui se trouve dans views/Demo/index.php<br />
+<pre class="brush: php;  toolbar: false;">&lt;p&gt;<br />
+	Ceci est la &lt;span class=&quot;text-warning&quot;&gt;vue&lt;/span&gt; (index) par défaut du &lt;span class=&quot;text-warning&quot;&gt;controller&lt;/span&gt; Demo.<br />
+&lt;/p&gt;</pre><br />
+Vous avez en quelques ligne fait fonctionner votre première application Wheel PhP, dans le prochain article nous verrons toutes les méthodes de la class Model pour lire, écrire, mettre à jour ou supprimer des données.<br />
+A bientôt !<img alt=":)" src="/artsetmetiers/webroot/img/design/emoticons/smile.png" /></p>]]></description>
+				<author>lionel.dupouy@gmail.com</author>
+				<category><![CDATA[Wheel PHP]]></category>
+				<guid isPermaLink="true"><![CDATA[1370955960]]></guid>
+				<pubDate>Tue, 11 Jun 2013 15:06:00 +0200</pubDate>
+				<source>http://www.cnam-it.fr/blog</source>
+			</item>	
+		
+			</channel>
+			</rss>
+			
+			
