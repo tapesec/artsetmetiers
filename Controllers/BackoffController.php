@@ -1,13 +1,13 @@
 <?php
 class BackoffController extends Controller{
 
-	public $helpers = array('Form', 'DateHelper', 'RssHelper', 'Markitup'); //charge les helpers passé dans le tableau
+	public $helpers = array('Form', 'DateHelper', 'RssHelper', 'Markitup', 'Truncate'); //charge les helpers passé dans le tableau
 
 	/**
 	*@return le menu du panneau d'administration du back office
 	**/
 	public function index(){
-				$this->layout='back';
+		$this->layout='back';
 		$this->loadModel('Page');
 		$data = $this->Page->find(array('fields' => 'pag_name, pag_url, pag_id, pag_src',
 								'where' => array('pag_type' => 'back'),
@@ -615,17 +615,17 @@ class BackoffController extends Controller{
 									       	'art_use_id = use_id')),
 									 'limit' => 'LIMIT 10'));
 		
-		$this->RssHelper->TitleChannel('Le Blog de Cnam-it.fr')
+		$this->RssHelper->Css('css/rss.css')
+				->TitleChannel('Le Blog de Cnam-it.fr')
 				->LinkChannel('http://www.cnam-it.fr/blog')
 				->DescriptionChannel('Le flux RSS du site CNAM-IT.fr, le site pour les étudiants au CNAM en informatique')
 				->Ttl('1');
 		$this->RssHelper->startRss();
 				
 		foreach($data as $k => $v){
-			
 			$this->RssHelper->Title($v['art_title'])
 					->Link($link = ($v['art_slot'] == 'blog')? "http://www.cnam-it.fr/blog/voir/".$v['art_id'] : "http://www.cnam-it.fr/video/voir".$v['art_id'])
-					->Description(Sanitize::show($this->Markitup->bbcodeParse($v['art_content'])))
+					->Description($this->Truncate->fragment($this->Markitup->bbcodeParse($v['art_content']),30))
 					->Author($v['use_mail'])
 					->Category($v['cat_name'])
 					->Guid(strtotime($v['art_dateC']))

@@ -294,7 +294,7 @@ class AuthController extends Controller{
 		$mail = $check_user[0]['use_mail'];
 		Request::$handMade = true;
 		if($this->User->update(array('use_password1' => $password, 'use_password2' => $password), array('where' => array('use_id' => $check_user[0]['use_id'])))) {
-			if(mail($mail, 'Arts et Métiers - Envoie de votre nouveau mot de passe', 'Voici votre nouveau mot de passe '.$random.PHP_EOL.
+			if(mail($mail, 'Cnam-it.fr - Envoie de votre nouveau mot de passe', 'Voici votre nouveau mot de passe '.$random.PHP_EOL.
 				'Rendez vous vite dans votre profil pour le modifier par un nouveau plus facile à retenir'.PHP_EOL.
 				$random,
 				'From: webmaster@cnam-it.fr')){

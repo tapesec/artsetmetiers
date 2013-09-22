@@ -1,13 +1,19 @@
+div#notification{
+	position:absolute;
+	top:10%;	
+	z-index:1000;
+	left:-50%;
+}
 img.icone_topbar {
 	margin:-7px 0 -7px 0;
 }
 img.icone_lock {
 	width:16px;
-	heigth:16px;
+	height:16px;
 }
 img.icone_postit {
 	width:16px;
-	heigth:16px;
+	height:16px;
 }
 img.icone_comment {
 	width:16px;

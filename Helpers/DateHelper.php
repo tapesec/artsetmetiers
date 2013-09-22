@@ -14,34 +14,20 @@ class DateHelper extends DateTime{
 		$m = (isset($param['mois']))? $param['mois'] : '';
 		$delay = (isset($param['delay']))? $param['delay'] : false;
 		$short = (isset($param['short']))? $param['short'] : '';
-
-		$now = time();
 		$strdate = strtotime($obj->format('Y-m-d H:i:s'));
-		//debug($strdate);
 		
 		if($delay){
-			$diff = $now - $strdate;
-			$diff = ceil($diff/(3600*24));
-			//debug($diff);
-			if($diff > 30){
-				$dateFinale = self::fr($date);
-				return $dateFinale;
-				//debug($dateFinale);
-			}elseif($diff <= 30 && $diff > 1){
-				return $dateFinale = 'Il y a '.$diff.' jours';
-			}elseif($diff ==1){
-				return $dateFinale = ucfirst(strftime('Hier à %H : %M', $strdate));
-			}elseif($diff < 1){
-				return $dateFinale = ucfirst(strftime('Aujourd\'hui à %H : %M', $strdate));
-				//die('erreur date');
+			$now = new DateTime();
+			$interval = $now->diff($obj);	
+			if($interval->days <= 1){
+				return 'Il y a '.$interval->format('%h heures');
+			}else{
+				return $dateFinale = ucfirst(strftime('%A %d %B %Y', $strdate));
 			}
 		}else{
-			$dateFinale = ucfirst(strftime('%a %d %b %Y', $strdate));
+			$dateFinale = ucfirst(strftime('%A %d %B %Y', $strdate));
 			return $dateFinale;
-		}
-		//debug($dateFinale);
-		//return $dateFinale;
-
+		}	
 	}
 
 	/**

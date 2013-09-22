@@ -18,7 +18,21 @@
 			break;
 	   }
 
-	  echo '<div id="notification" class="alert '.$alert.'">';
+	  echo '<div id="notification" class="alert '.$alert.' span4">';
 	  echo '<button type="button" href="#" class="close" data-dismiss="alert">&times;</button>';
 	  echo $_SESSION['flash'];
-	  echo '</div>';
+	  echo '</div>';?>
+	  <script>
+		$(document).ready(function(){
+			$('#notification')
+				.animate({
+					left:10
+				},700)
+				.animate({
+					left:10
+				},2000)
+				.animate({
+					opacity:0
+				}, 500);
+		});
+	  </script>

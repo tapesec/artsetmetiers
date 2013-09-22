@@ -115,14 +115,14 @@
     					</li>
     					<?php $exo_id = $this->layoutLoad('blog', 'findTest'); ?>
     					<li class="span3">
-	    					<a href="<?php echo BASE_URL.'/blog/voir/'.$exo_id['art_id']; ?>" class="thumbnail">
-	    					<?php $this->img('design/img/test.png', array('alt' => 'image représentant l\'acces à la partie testez vous')); ?>
+	    					<a href="<?php echo BASE_URL.'/video/index'; ?>" class="thumbnail">
+	    					<?php $this->img('design/img/tutovideo.jpg', array('alt' => 'image représentant l\'acces à la partie testez vous')); ?>
 	    				</a>
 					    	<div class="caption">
-								<h2>Testez vous</h2>
-								<p>Régulièrement des exercices de programmation serons proposés, repondez-y en donnant la solution la plus élégante possible. <blockquote>"Il y a le bon codeur et le mauvais codeur".</blockquote></p>
+								<h2>Tutoriels vidéo</h2>
+								<p>Retrouvez dans cette rubrique toutes les vidéos à thème sur la programmation ou l'administration systeme, des compléments d'explication de cours etc..
 								<p>
-								<a class="btn btn-info" href="<?php echo BASE_URL.'/blog/voir/'.$exo_id['art_id']; ?>">Essayez !</a>
+								<a class="btn btn-info" href="<?php echo BASE_URL.'/video/index'; ?>">Regardez !</a>
 								</p>
 							</div>
     					</li>

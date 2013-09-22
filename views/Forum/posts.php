@@ -2,7 +2,7 @@
 <?php if(isset($posts['edition']) && !empty($posts['edition'])){
 	$rep = current($posts['edition']);
 }
-$post = current($posts['post']);
+	$post = current($posts['post']);
 ?>
 <ul class="breadcrumb">
 	<li><a href="<?php echo BASE_URL.'/forum/index';?>">Accueil</a> <span class="divider">/</span></li>
@@ -20,7 +20,7 @@ $post = current($posts['post']);
 	<table class="table table-striped table-bordered table-hover table-condensed">
 		<tr>
 			
-			<?php echo '<td colspan="2"><span class="date"><small>'.DateHelper::fr($post['sub_dateC']).'</span><span class="title"><h4>'.Sanitize::show($post['sub_title']).'</small></h4></span>'; ?>
+			<?php echo '<td colspan="2"><span class="date"><small>'.DateHelper::fr($post['sub_dateC'], array('delay' => true)).'</span><span class="title"><h4>'.Sanitize::show($post['sub_title']).'</small></h4></span>'; ?>
 				<?php if(isset(Auth::$session['use_checked']) && Auth::$session['use_checked'] == true): ?>
 					<?php if(Auth::$session['use_id'] == $post['sub_id_author'] || Auth::$session['use_statut'] >= 2): ?>
 					<span class="action"><small><a href="<?php echo BASE_URL.'/forum/addSubject/'.$post['sec_id'].'/'.$post['sub_id'];?>"><?php $this->img('design/img/Comment_Edit', array('class' => 'icone_comment', 'alt' => 'icone edition', 'title' => 'Editer')); ?></a></span><span class="action"><a href="<?php echo BASE_URL.'/forum/delSubject/'
@@ -46,10 +46,10 @@ $post = current($posts['post']);
 
 			<tr>
 				<?php echo '<td colspan="2">'; ?>
-				<?php echo '<span class="date"><small>'.DateHelper::fr($v['rep_dateC']).'</span><span class="title"><h4><small>'.Sanitize::show($v['rep_title']).'</small></h4></span>'; ?>
+				<?php echo '<span class="date"><small>'.DateHelper::fr($v['rep_dateC'], array('delay' => true)).'</span><span class="title"><h4><small>'.Sanitize::show($v['rep_title']).'</small></h4></span>'; ?>
 				<?php if(isset(Auth::$session['use_checked']) && Auth::$session['use_checked'] == true): ?>
 					<?php if(Auth::$session['use_id'] == $v['rep_id_author'] || Auth::$session['use_statut'] >= 2): ?>
-					<span class="action"><a href="'.BASE_URL.'/forum/posts/'.$posts['list'][0]['sub_id'].'/1/'.$v['rep_id'].'"><?php $this->img('design/img/Comment_Edit.png', array('class' => 'icone_comment')); ?></a></span><span class="action"><a href="'.BASE_URL.'/forum/delReply/'.$v['rep_id'].'"><?php $this->img('design/img/Comment_Remove.png', array('class'=> 'icone_comment', 'alt' => 'supprimer', 'title' => 'Supprimer')); ?></a></span>
+					<span class="action"><a href="<?php echo BASE_URL.'/forum/posts/'.$posts['list'][0]['sub_id'].'/1/'.$v['rep_id']; ?>"><?php $this->img('design/img/Comment_Edit.png', array('class' => 'icone_comment')); ?></a></span><span class="action"><a href="<?php echo BASE_URL.'/forum/delReply/'.$v['rep_id']; ?>"><?php $this->img('design/img/Comment_Remove.png', array('class'=> 'icone_comment', 'alt' => 'supprimer', 'title' => 'Supprimer')); ?></a></span>
 					<?php endif; ?>
 				<?php endif; ?>
 				<?php echo '</td>'; ?>

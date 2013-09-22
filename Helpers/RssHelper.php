@@ -2,6 +2,7 @@
 
 class RssHelper {
 
+	protected $cssUrl;
 	protected $titleChannel;
 	protected $linkChannel;
 	protected $descriptionChannel;
@@ -23,7 +24,8 @@ class RssHelper {
 
 
 	public function startRss() {
-		$this->loaded .= '<?xml version="1.0" encoding="UTF-8" ?>
+		$this->loaded .= '<?xml version="1.0" encoding="UTF-8" ?>'
+			.$this->cssUrl.'
 			<rss version="2.0">
 			<channel>
 			<title>'.$this->titleChannel.'</title>
@@ -62,6 +64,10 @@ class RssHelper {
 	}
 	
 	//the channel's setters
+	public function Css($data) {
+		$this->cssUrl = '<?xml-stylesheet type="text/css" href="'.$data.'" ?>';
+		return $this;
+	}
 	public function TitleChannel($data) {
 		$this->titleChannel = $data;
 		return $this;
