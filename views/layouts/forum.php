@@ -5,7 +5,7 @@
 	<meta name="description" content="Le forum communautaire de CNAM-IT.fr,
 	 Discussions générales, La Scolarité, Les diplômes et certificats BAC + 2, Les diplômes et certificats BAC + 3/4,
 	 Les masters et diplômes d'ingénieurs" />
-	<title>Le forum de CNAM-IT.fr</title>
+	<title>CNAM-IT.fr</title>
 	<?php echo $this->link('css', 'bootstrap.min'); ?>
 	<?php echo $this->link('markitup/skins/simple', 'style', 'css'); ?>
 	<?php echo $this->link('markitup/sets/bbcode', 'style', 'css'); ?>

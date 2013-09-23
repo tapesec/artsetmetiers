@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-	<title>Arts et métiers</title>
+	<title>CNAM-IT.FR</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="Voici le blog et l'espace carte de visite de CNAM-IT.fr  retrouvez y plein d'articles sur les cours du CNAM en informatique, le php, le HTML / CSS, et sur les domaines des nouvelles technologies ainsi que une page de profil totalement configurable pour faire apparaitre les diplomes et unités d'enseignement que vous avez obtenus" />
 	<?php echo $this->link('css', 'bootstrap.min'); ?>
