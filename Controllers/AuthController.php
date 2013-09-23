@@ -38,7 +38,7 @@ class AuthController extends Controller{
 				$tokken = str_replace('.', '', $tokken);
 				$this->request->data['use_password1'] = $tokken;
 				$this->request->data['use_password2'] = $tokken;
-				$link = 'http://www.frienddcop.com/auth/checked/'.$tokken;
+				$link = 'http://www.cnam-it.fr/auth/checked/'.$tokken;
 				$this->request->data['use_link'] = $tokken;
 				
 				if($this->request->data['use_password1'] == $this->request->data['use_password2']){
@@ -49,10 +49,10 @@ class AuthController extends Controller{
 						$this->Avatar->save(array('ava_url' => 'avatar/default.png', 'ava_id_user' => $use_id[0]['use_id']));
 
 						Request::$handMade = false;
-						if(mail($this->request->data['use_mail'], 'Arts et Métiers - Confirmation de votre inscription', 'Bienvenue chez Arts et métiers !<br/>'.PHP_EOL.
+						if(mail($this->request->data['use_mail'], 'Cnam-it.fr - Confirmation de votre inscription', 'Bienvenue chez Cnam-it.fr !'.PHP_EOL.
 							'Pour confirmer votre inscription cliquez ici :'.PHP_EOL.
 							$link,
-							'From: webmaster@cnam-it.fr')){
+							'To: '.$this->request->data['use_mail']."\r\n".'From: webmaster@cnam-it.fr'."\r\n".'Reply-to: webmaster@cnam-it.fr'."\r\n".'X-Mailer:PHP/'.phpversion())){
 							$this->session->setFlash('Rendez vous sur votre boite mail pour confirmer votre inscription. Pensez à vérifier vos spams', 'success');
 							$this->redirect('blog/index');
 						}else{
@@ -118,7 +118,7 @@ class AuthController extends Controller{
 			$this->loadModel('User');
 			$password = crypt($this->request->data['use_password1'], 'tapesec');
 			$password = str_replace('.', '', $password);
-			echo $password;
+			//echo $password;
 
 			$check_user = $this->User->find(array('join' => array('type' => 'LEFT OUTER JOIN',
 												  				  'table' => 'avatars',
@@ -225,7 +225,7 @@ class AuthController extends Controller{
 		debug($_SESSION);
 		$avatar = (!empty($this->request->file['avatar']))? $this->request->file['avatar'] : '';
 		
-		if(preg_match('/[.jpg|.png|.gif]$/', $avatar['name'])
+		if(preg_match('/(.jpg)|(.png)|(.gif)$/', $avatar['name'])
 		  && $avatar['size'] <= $this->request->data['max_size']
 		  && !$avatar['error']){
 			$ext = explode('.', $avatar['name']);
@@ -272,7 +272,7 @@ class AuthController extends Controller{
 			if(mail($mail, 'Arts et Métiers - Envoie de votre nouveau mot de passe', 
 				'Si vous avez bien demandé un nouveau mot de passe car vous avez oublié le votre'.PHP_EOL.
 				'cliquez sur ce lien changera votre mot de passe et vous renverra le nouveau dans votre boite mail.'.PHP_EOL.$link.PHP_EOL,
-				'From: webmaster@artsEtMetiers.com')){
+				'From: webmaster@cnam-it.fr')){
 				$this->session->setFlash('Rendez vous dans votre boite mail pour confirmer le changement de votre mot de passe', 'success');
 				$this->redirect('auth/connexion');
 			}else{
@@ -294,10 +294,10 @@ class AuthController extends Controller{
 		$mail = $check_user[0]['use_mail'];
 		Request::$handMade = true;
 		if($this->User->update(array('use_password1' => $password, 'use_password2' => $password), array('where' => array('use_id' => $check_user[0]['use_id'])))) {
-			if(mail($mail, 'Arts et Métiers - Envoie de votre nouveau mot de passe', 'Voici votre nouveau mot de passe '.$random.PHP_EOL.
+			if(mail($mail, 'Cnam-it.fr - Envoie de votre nouveau mot de passe', 'Voici votre nouveau mot de passe '.$random.PHP_EOL.
 				'Rendez vous vite dans votre profil pour le modifier par un nouveau plus facile à retenir'.PHP_EOL.
 				$random,
-				'From: webmaster@artsEtMetiers.com')){
+				'From: webmaster@cnam-it.fr')){
 				$this->session->setFlash('Un nouveau mot de passe a bien été envoyé dans votre boite mail', 'success');
 				$this->redirect('auth/connexion');
 			}else{

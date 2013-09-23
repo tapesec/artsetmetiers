@@ -57,7 +57,7 @@ class Form{
 		$multiple = (isset($param['multiple']) && $param['multiple'] == true)? 'multiple="multiple"' : '';
 		$autocomplete = (isset($param['autocomplete']) && $param['autocomplete'] == 'off')? 'autocomplete="off"' : '';
 		$id = (isset($param['id']))? $param['id'] : '';
-
+		
 		if(is_array($list)){
 			if(is_array(current($list))){
 				debug(current($list));

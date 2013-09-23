@@ -2,8 +2,8 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<meta name="description" content="Vous êtes sur la page d'accueil du site Arts et Métiers IT, le site communautaire des étudiants du CNAM en Technologies de l'Information et de la COmmunication." />
-	<title>Bienvenue chez Arts et métiers IT !</title>
+	<meta name="description" content="Vous êtes sur la page d'accueil du site CNAM-IT.fr, le site communautaire des étudiants du CNAM en Technologies de l'Information et de la Communication." />
+	<title>Bienvenue chez CNAM-IT.fr</title>
 	<?php echo $this->link('css', 'bootstrap.min'); ?>
 	<?php echo $this->link('markitup/skins/simple', 'style', 'css'); ?>
 	<?php echo $this->link('markitup/sets/bbcode', 'style', 'css'); ?>
@@ -25,7 +25,7 @@
   		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  		ga('create', 'UA-42223274-1', 'frienddcop.com');
+  		ga('create', 'UA-42223274-1', 'cnam-it.fr');
 		ga('send', 'pageview');
 	</script>
 </head>
@@ -63,16 +63,16 @@
 			</div>
 			<?php echo $this->session->flash(); ?>
 		</div>	
+	</div>	
+	<div class="row-fluid banner_area">
+		<div class="span12 banner">
+			<?php $this->img('design/img/bannertest.jpg', array('alt' => 'Bannière du site CNAM-IT.FR')); ?>
+		</div>	
 	</div>
+
 	<div class="container-fluid">
 		
-		<div class="row-fluid banner_area">
-			<div class="span12 banner">
-
-				<?php $this->img('design/img/banner.jpg', array('alt' => 'Bannière du site Arts et Métiers IT')); ?>
-			</div>	
-		</div>
-			<div class="row-fluid">
+				<div class="row-fluid">
 				<div class="span12">
 				    <ul class="thumbnails">
     					<li class="span3">
@@ -115,14 +115,14 @@
     					</li>
     					<?php $exo_id = $this->layoutLoad('blog', 'findTest'); ?>
     					<li class="span3">
-	    					<a href="<?php echo BASE_URL.'/blog/voir/'.$exo_id['art_id']; ?>" class="thumbnail">
-	    					<?php $this->img('design/img/test.png', array('alt' => 'image représentant l\'acces à la partie testez vous')); ?>
+	    					<a href="<?php echo BASE_URL.'/video/index'; ?>" class="thumbnail">
+	    					<?php $this->img('design/img/tutovideo.jpg', array('alt' => 'image représentant l\'acces à la partie testez vous')); ?>
 	    				</a>
 					    	<div class="caption">
-								<h2>Testez vous</h2>
-								<p>Régulièrement des exercices de programmation serons proposés, repondez-y en donnant la solution la plus élégante possible. <blockquote>"Il y a le bon codeur et le mauvais codeur".</blockquote></p>
+								<h2>Tutoriels vidéo</h2>
+								<p>Retrouvez dans cette rubrique toutes les vidéos à thème sur la programmation ou l'administration systeme, des compléments d'explication de cours etc..
 								<p>
-								<a class="btn btn-info" href="<?php echo BASE_URL.'/blog/voir/'.$exo_id['art_id']; ?>">Essayez !</a>
+								<a class="btn btn-info" href="<?php echo BASE_URL.'/video/index'; ?>">Regardez !</a>
 								</p>
 							</div>
     					</li>

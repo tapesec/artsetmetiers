@@ -5,9 +5,15 @@
 class Config{
 
 	/**
+<<<<<<< HEAD
 	* configurez ici l'adresse de votre site internet.
 	**/
 	static $website_adress = 'http://localhost';
+=======
+	* configurez ici l'adresse vers la page de connexion (url appelé en ca de tentative d'acces a une page à privilège.
+	**/
+	static $website_adress = 'http://localhost/artsetmetiers/webroot/auth/connexion';
+>>>>>>> dev
 
 
 	static $homeController = 'accueil'; //définissez un controller par défaut pour votre page d'acceuil, ce controlleur devra avoir une méthode par défaut nommé index
@@ -62,6 +68,18 @@ class Config{
 								'addSubject' => 1,
 								'delReply' => 1,
 								'lockSubject' => 2),
+<<<<<<< HEAD
+=======
+							'message' => array(
+								'index' => 1,
+								'voir' => 1,
+								'repondre' => 1,
+								'getLogin' => 1,
+								'ecrire' => 1,
+								'delete' => 1
+
+							),
+>>>>>>> dev
 							'parcours' => array(
 								'edit' => 1),
 							'backoff' => array(
@@ -73,7 +91,12 @@ class Config{
 								'listUsers' => 10,
 								'unite' => 10,
 								'diplome' => 10,
+<<<<<<< HEAD
 								'listCat' => 10));
+=======
+								'listCat' => 10,
+								'fileExplorer' => 10));
+>>>>>>> dev
 
 	
 	/**

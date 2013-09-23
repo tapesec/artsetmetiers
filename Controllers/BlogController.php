@@ -183,7 +183,7 @@ class BlogController extends Controller{
 	**/
 	public function listCat(){
 		$this->loadModel('Categorie');
-		$data['categories'] = $this->Categorie->find();
+		$data['categories'] = $this->Categorie->find(array('where' => array('cat_type' => 'blog')));
 		return $data['categories'];
 	}
 

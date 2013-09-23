@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<meta name="description" content="Le forum communautaire du site Arts et métiers IT,
+	<meta name="description" content="Le forum communautaire de CNAM-IT.fr,
 	 Discussions générales, La Scolarité, Les diplômes et certificats BAC + 2, Les diplômes et certificats BAC + 3/4,
 	 Les masters et diplômes d'ingénieurs" />
-	<title>Le forum de Arts et Métiers IT</title>
+	<title>CNAM-IT.fr</title>
 	<?php echo $this->link('css', 'bootstrap.min'); ?>
 	<?php echo $this->link('markitup/skins/simple', 'style', 'css'); ?>
 	<?php echo $this->link('markitup/sets/bbcode', 'style', 'css'); ?>
@@ -26,7 +26,7 @@
   		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  		ga('create', 'UA-42223274-1', 'frienddcop.com');
+  		ga('create', 'UA-42223274-1', 'cnam-it.fr');
 		ga('send', 'pageview');
 	</script>
 </head>
@@ -35,7 +35,7 @@
 	<div class="row-fluid">
 		<div class="span12">
 			<?php $data['pages'] = $this->layoutLoad('Blog', 'page'); ?>
-		    <div class="navbar">
+		    <div class="navbar navbar-static-top">
 			    <div class="navbar-inner">
 		    		<a class="brand" href="#"><h1><?php echo ucfirst($this->request->controller); ?></h1></a>
 		    		<ul class="nav">
@@ -75,6 +75,13 @@
 			</div>
 			<?php echo $this->session->flash(); ?>
 		</div>
+	</div>
+	<div class="row-fluid banner_area">
+		<div class="span12 banner">
+			<?php $this->img('design/img/bannertestS2.jpg', array('alt' => 'Bannière du site CNAM-IT.FR')); ?>
+			<p class="banner-info" id="bannerInfo"></p>
+
+		</div>	
 	</div>
 	<div class="container-fluid">
 		

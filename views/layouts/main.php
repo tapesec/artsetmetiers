@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-	<title>Arts et métiers</title>
+	<title>CNAM-IT.FR</title>
 	<meta charset="UTF-8">
-	<meta name="description" content="Voici le blog et l'espace carte de visite de Arts et Métiers IT retrouvez y plein d'articles sur les cours du CNAM en informatique, le php, le HTML / CSS, et sur les domaines des nouvelles technologies ainsi que une page de profil totalement configurable pour faire apparaitre les diplomes et unités d'enseignement que vous avez obtenus" />
+	<meta name="description" content="Voici le blog et l'espace carte de visite de CNAM-IT.fr  retrouvez y plein d'articles sur les cours du CNAM en informatique, le php, le HTML / CSS, et sur les domaines des nouvelles technologies ainsi que une page de profil totalement configurable pour faire apparaitre les diplomes et unités d'enseignement que vous avez obtenus" />
 	<?php echo $this->link('css', 'bootstrap.min'); ?>
 	<?php echo $this->link('markitup/skins/simple', 'style', 'css'); ?>
 	<?php echo $this->link('markitup/sets/bbcode', 'style', 'css'); ?>
@@ -19,13 +19,14 @@
 	<?php echo $this->link('javascript', 'style'); ?>
 	<?php echo $this->link('javascript', 'plugs'); ?>
 	<?php echo $this->link('javascript', 'bootstrap.min'); ?>
+<link rel="alternate" type="application/rss+xml" title="Le flux rss de cnam-it.fr" href="<?php echo '/rss.xml'; ?>">
 	<script>
   		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
  		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  		ga('create', 'UA-42223274-1', 'frienddcop.com');
+  		ga('create', 'UA-42223274-1', 'cnam-it.fr');
 		ga('send', 'pageview');
 	</script>
 </head>
@@ -66,7 +67,12 @@
 			<?php echo $this->session->flash(); ?>
 		</div>
 	</div>
-	
+	<div class="row-fluid banner_area">
+		<div class="span12 banner">
+			<?php $this->img('design/img/bannertestS2.jpg', array('alt' => 'Bannière du site CNAM-IT.FR')); ?>
+			<p class="banner-info" id="bannerInfo"></p>
+		</div>	
+	</div>
 	<div class="container-fluid">
 		
 		<div class="row-fluid">	
@@ -173,7 +179,7 @@
 							</div>
 						
 							<div class="span4">
-								<?php $this->img('design/img/rss2.png', array('alt' => 'icone flux RSS')); ?>
+								<a href="<?php echo '/rss.xml'; ?>"><?php $this->img('design/img/rss2.png', array('alt' => 'icone flux RSS')); ?></a>
 							</div>
 						</div>
 						

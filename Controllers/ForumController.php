@@ -173,7 +173,8 @@ class ForumController extends Controller{
 			if($this->Subject->update($this->request->data, array('where' => array('sub_id' => $sub_id)))){
 				
 				$this->session->setFlash('Sujet bien mis à jour !', 'success');
-				$this->redirect($this->referer);
+				$this->redirect('forum/posts/'.$sub_id);
+
 			}else{
 				$this->session->setFlash('Veuillez corriger vos erreurs !', 'error');
 				$this->redirect($this->referer);
@@ -186,7 +187,7 @@ class ForumController extends Controller{
 			$this->request->data['sub_id_sections'] = intval($this->request->param[0]);
 			if($this->Subject->save($this->request->data)){
 				$this->session->setFlash('Nouveau message bien enregistré !', 'success');
-				$this->redirect($this->referer);
+				$this->redirect('forum/section/'.$sec_id);
 			}else{
 				
 				$this->session->setFlash('Veuillez corriger vos erreurs !', 'error');

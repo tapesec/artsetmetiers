@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?><?xml-stylesheet type="text/css" href="css/rss.css" ?>
+			<rss version="2.0">
+			<channel>
+			<title>Le Blog de Cnam-it.fr</title>
+			<link>http://www.cnam-it.fr/blog</link>
+			<description>Le flux RSS du site CNAM-IT.fr, le site pour les étudiants au CNAM en informatique</description>
+			<ttl>1</ttl>
+
+			
+			<item>
+				<title><![CDATA[Testons le retour à la ligne avec truc]]></title>
+				<link>http://www.cnam-it.fr/video/voir30</link>
+				<description><![CDATA[ <p>On va tester dans cette vidéo bidon un retour à la ligne, normalement, ca ne doit pas poser problème mais si c'est le cas on mettra en place le laborieux systeme de ligne à ligne..]]></description>
+				<author>lionel.dupouy@gmail.com</author>
+				<category><![CDATA[Linux]]></category>
+				<guid isPermaLink="true"><![CDATA[1379431680]]></guid>
+				<pubDate>Tue, 17 Sep 2013 17:28:00 +0200</pubDate>
+				<source>http://www.cnam-it.fr/blog</source>
+			</item>	
+		
+			<item>
+				<title><![CDATA[Wheel php (présentation)]]></title>
+				<link>http://www.cnam-it.fr/video/voir29</link>
+				<description><![CDATA[ <p>Voici la premiere vidéo d'une série visant à vous présenter mon framework maison développé dans le cadre du cours NFA021 développement web (3). <br />
+Je me suis inspiré de la syntaxe et de l'architecture de cakephp en moins poussé quand même mais accessible à tous..]]></description>
+				<author>lionel.dupouy@gmail.com</author>
+				<category><![CDATA[Wheel PHP]]></category>
+				<guid isPermaLink="true"><![CDATA[1379431140]]></guid>
+				<pubDate>Tue, 17 Sep 2013 17:19:00 +0200</pubDate>
+				<source>http://www.cnam-it.fr/blog</source>
+			</item>	
+		
+			<item>
+				<title><![CDATA[Une vidéo essai]]></title>
+				<link>http://www.cnam-it.fr/video/voir28</link>
+				<description><![CDATA[ <p>Une nouvelle vidéo de test je pense que j'ai trouver une solution pour standardisé la taille des tuiles vidéo grace à la propriété min et max-width</p>  ..]]></description>
+				<author>lionel.dupouy@gmail.com</author>
+				<category><![CDATA[PHP]]></category>
+				<guid isPermaLink="true"><![CDATA[1379430720]]></guid>
+				<pubDate>Tue, 17 Sep 2013 17:12:00 +0200</pubDate>
+				<source>http://www.cnam-it.fr/blog</source>
+			</item>	
+		
+			<item>
+				<title><![CDATA[Un titre un petit peu long pour voir des choses]]></title>
+				<link>http://www.cnam-it.fr/video/voir26</link>
+				<description><![CDATA[ <p>Une vidéo sympa de norman sur Google criante de vérité !<br />
+J'aime beaucoup parce c'est comme ca nous allons apprendre plein de chose sur la programmation. Et peut etre sur le secret des donuts..]]></description>
+				<author>lionel.dupouy@gmail.com</author>
+				<category><![CDATA[PHP]]></category>
+				<guid isPermaLink="true"><![CDATA[1379244900]]></guid>
+				<pubDate>Sun, 15 Sep 2013 13:35:00 +0200</pubDate>
+				<source>http://www.cnam-it.fr/blog</source>
+			</item>	
+		
+			<item>
+				<title><![CDATA[Maintenant j'ai Google]]></title>
+				<link>http://www.cnam-it.fr/video/voir25</link>
+				<description><![CDATA[ <p>Une vidéo sympa de norman sur Google criante de vérité !<br />
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vestibulum, libero id ullamcorper tempus, metus enim pulvinar metus, sed eleifend dolor justo ac odio..]]></description>
+				<author>lionel.dupouy@gmail.com</author>
+				<category><![CDATA[PHP]]></category>
+				<guid isPermaLink="true"><![CDATA[1379235540]]></guid>
+				<pubDate>Sun, 15 Sep 2013 10:59:00 +0200</pubDate>
+				<source>http://www.cnam-it.fr/blog</source>
+			</item>	
+		
+			<item>
+				<title><![CDATA[Inscription pour la rentrée de septembre]]></title>
+				<link>http://www.cnam-it.fr/video/voir21</link>
+				<description><![CDATA[ <p><img class="img-polaroid blog" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSOWgTY2ThTdaIOlDbVyBb8MtxZMADKilXjiuxctXpJhVobZgUt_g" alt="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSOWgTY2ThTdaIOlDbVyBb8MtxZMADKilXjiuxctXpJhVobZgUt_g" />Bonjour les Cnamiens,</p><p>La rentrée de l'année 2013 / 2014 se prépare des maintenant.<br />
+Vous pouvez accéder au catalogue des formations dispensées par le CNAM en informatique à <a href="http://catalogues-formation..]]></description>
+				<author>lionel.dupouy@gmail.com</author>
+				<category><![CDATA[CNAM]]></category>
+				<guid isPermaLink="true"><![CDATA[1373012640]]></guid>
+				<pubDate>Fri, 05 Jul 2013 10:24:00 +0200</pubDate>
+				<source>http://www.cnam-it.fr/blog</source>
+			</item>	
+		
+			<item>
+				<title><![CDATA[QWANT un moteur de recherche Made in France !]]></title>
+				<link>http://www.cnam-it.fr/video/voir20</link>
+				<description><![CDATA[ <p><img class="img-polaroid blog" src="http://t0.gstatic.com/images?q=tbn:ANd9GcSX40AagIT75OkZ7CL32MSo_rg8ixOMpjciC2fMpbqZjz3twZlvQw" alt="http://t0.gstatic.com/images?q=tbn:ANd9GcSX40AagIT75OkZ7CL32MSo_rg8ixOMpjciC2fMpbqZjz3twZlvQw" />Qwant est un moteur de recherche français fondé par Jean-Manuel Rozan, Éric Leandri et la société Pertimm spécialisée dans la conception de moteurs de recherche..]]></description>
+				<author>lionel.dupouy@gmail.com</author>
+				<category><![CDATA[Actualités]]></category>
+				<guid isPermaLink="true"><![CDATA[1372967820]]></guid>
+				<pubDate>Thu, 04 Jul 2013 21:57:00 +0200</pubDate>
+				<source>http://www.cnam-it.fr/blog</source>
+			</item>	
+		
+			<item>
+				<title><![CDATA[La guerre des BOM]]></title>
+				<link>http://www.cnam-it.fr/video/voir19</link>
+				<description><![CDATA[ <p><img class="img-polaroid blog" src="http://www.w3.org/International/questions/images/bom.png" alt="http://www.w3.org/International/questions/images/bom.png" />Bonjour les cnamiens aujourd'hui je voulais faire un court article sur l'encodage de caractère, l'UTF-8 et .. le BOM !<br />
+Quand vous utilisez beaucoup de scripts avec des includes / require vous avez beau ne pas avoir de problème d'encodage apparent il peut quand même subvenir des soucis de &quot;white space qui foutra en l'air votre mise en page web..]]></description>
+				<author>lionel.dupouy@gmail.com</author>
+				<category><![CDATA[PHP]]></category>
+				<guid isPermaLink="true"><![CDATA[1372884180]]></guid>
+				<pubDate>Wed, 03 Jul 2013 22:43:00 +0200</pubDate>
+				<source>http://www.cnam-it.fr/blog</source>
+			</item>	
+		
+			<item>
+				<title><![CDATA[Wheel PhP les méthodes de la class Model]]></title>
+				<link>http://www.cnam-it.fr/video/voir16</link>
+				<description><![CDATA[ <p><img class="img-polaroid blog" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSk_AaRy3I7FiAIqvJrfOBfzklaflOhdJxK8Dt761TfUnCR4Mp7" alt="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSk_AaRy3I7FiAIqvJrfOBfzklaflOhdJxK8Dt761TfUnCR4Mp7" />Voyons à présent dans cet article comment utiliser les fonctionnalités &quot;CRUD&quot; de toute application php.<br />
+Considérons une table mysql &quot;articles&quot; qui dispose de champs 'art_id', 'art_titre', 'art_content'..]]></description>
+				<author>lionel.dupouy@gmail.com</author>
+				<category><![CDATA[Wheel PHP]]></category>
+				<guid isPermaLink="true"><![CDATA[1371653160]]></guid>
+				<pubDate>Wed, 19 Jun 2013 16:46:00 +0200</pubDate>
+				<source>http://www.cnam-it.fr/blog</source>
+			</item>	
+		
+			<item>
+				<title><![CDATA[Wheel PHP un framework agile]]></title>
+				<link>http://www.cnam-it.fr/video/voir13</link>
+				<description><![CDATA[ <p><img class="img-polaroid blog" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSk_AaRy3I7FiAIqvJrfOBfzklaflOhdJxK8Dt761TfUnCR4Mp7" alt="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSk_AaRy3I7FiAIqvJrfOBfzklaflOhdJxK8Dt761TfUnCR4Mp7" />Wheel PhP est un petit framework &quot;Home made&quot;, que j'ai développé à l'occasion du projet de fin d'études NFA021 du CNAM.</p><p>Ce Framework utilise PhP 5..]]></description>
+				<author>lionel.dupouy@gmail.com</author>
+				<category><![CDATA[Wheel PHP]]></category>
+				<guid isPermaLink="true"><![CDATA[1370955960]]></guid>
+				<pubDate>Tue, 11 Jun 2013 15:06:00 +0200</pubDate>
+				<source>http://www.cnam-it.fr/blog</source>
+			</item>	
+		
+			</channel>
+			</rss>
+			
+			

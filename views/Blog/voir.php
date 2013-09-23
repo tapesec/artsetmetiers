@@ -8,14 +8,14 @@
 	
 		<article>
 		<h1 class="text-success"><?php echo $art['art_title']; ?></h1>
-		<div><small>Par <a href="<?php echo BASE_URL.'/parcours/voir/'.$art['use_id']; ?>"><strong><?php echo $art['use_login']; ?></strong></a>
+		<div><small>Par <a href="<?php echo BASE_URL.'/parcours/voir/'.$art['use_id']; ?>"><span class="label label-info"><?php echo $art['use_login']; ?></span></a>
 		<?php echo dateHelper::fr($art['art_dateC'], array('delay' => true)); ?>
-		<span class="auteur"><a href=""> <?php echo $art['cat_name']; ?></a></span>
-		<span class="text-success">
+		<span class="auteur"><a href=""><span class="label label-warning"> <?php echo $art['cat_name']; ?></span></a></span>
+		<span class="label label-success">
 		<?php $nbre_com = $this->layoutLoad('blog', 'countCom', $art['art_id']); ?>
 		<?php echo $nbre_com; echo ($nbre_com <= 1)? ' commentaire' : ' commentaires'; ?>
 		</span>
-		</small></div>
+		</small></span>
 		<p><?php echo $this->Markitup->bbcodeParse(Sanitize::show($art['art_content'])); ?></p>
 		</article>
 		<div class="wall_comment">
@@ -104,3 +104,8 @@
 		</div>
 	</div>
 </div>
+<script>
+	$(document).ready(function(){
+		$('#bannerInfo').text('<?php echo $art['art_title'];  ?>');
+	});
+</script>

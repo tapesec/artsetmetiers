@@ -62,7 +62,7 @@ class Markitup{
 		$out = array(	 '<strong>\1</strong>',
 						 '<em>\1</em>',
 						 '<u>\1</u>',
-						 '<img class="img-polaroid" src="\1" alt="\1" />',
+						 '<img class="img-polaroid blog" src="\1" alt="\1" />',
 						 '<a href="mailto:\1">\1</a>',
 						 '<a href="\1">\2</a>',
 						 '<span style="font-size:\1%">\2</span>',

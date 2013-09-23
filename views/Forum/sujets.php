@@ -90,3 +90,9 @@
 	</table>
 	<?php debug($subjects['subject'][0]['sec_id']); ?>
 	<?php echo $this->paginator('forum/section/'.$subjects['subject'][0]['sec_id'], 'pagination'); ?>
+
+<script>
+	$(document).ready(function(){
+		$('#bannerInfo').text('<?php echo Sanitize::show($subjects['subject'][0]['sec_name']); ?>');
+	});
+</script>

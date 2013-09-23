@@ -1,7 +1,7 @@
 <?php
 class BackoffController extends Controller{
 
-	public $helpers = array('Form', 'DateHelper'); //charge les helpers passé dans le tableau
+	public $helpers = array('Form', 'DateHelper', 'RssHelper', 'Markitup', 'Truncate'); //charge les helpers passé dans le tableau
 
 	/**
 	*@return le menu du panneau d'administration du back office
@@ -32,22 +32,28 @@ class BackoffController extends Controller{
 	*@return une page contenant un outil d'édition de texte
 	**/
 	public function addArticle($id=null){
-		
 		$this->loadModel('Article');
 		$this->loadModel('Categorie');
 
 		if($this->request->is('GET')){
 			$this->layout = 'back';
 			if(isset($id) && !empty($id)){
-				$data_article = $this->Article->find(array('fields' => 'art_id, art_title, art_content, art_cat_id, art_online, art_slot, art_dateM, art_dateC',
+				$data_article = $this->Article->find(array('fields' => 'art_id, art_title, art_content, art_cov, art_youtube, art_level, art_cat_id, art_online, art_slot, art_dateM, art_dateC',
 									   'where' => array('art_id' => $id)));
-				$listCat = $this->Categorie->find(array('fields' => 'cat_id, cat_name'));
+				$listCatBlog = $this->Categorie->find(array('fields' => 'cat_id, cat_name',
+										'where' => array('cat_type' => 'blog')));
+				$listCatTuto = $this->Categorie->find(array('fields' => 'cat_id, cat_name',
+										'where' => array('cat_type' => 'tutoriel')));
 				if(!empty($data_article)){
-					$this->set('articles', array($data_article, $listCat));
+					$this->set('articles', array($data_article, $listCatBlog, $listCatTuto));
 				}	
 			}else{
-				$listCat = $this->Categorie->find(array('fields' => 'cat_id, cat_name'));
-				$this->set('listCat', $listCat);
+				$listCatBlog = $this->Categorie->find(array('fields' => 'cat_id, cat_name',
+										'where' => array('cat_type' => 'blog')));
+				$listCatTuto = $this->Categorie->find(array('fields' => 'cat_id, cat_name',
+										'where' => array('cat_type' => 'tutoriel')));
+
+				$this->set('listCat', array('listCat_blog' => $listCatBlog, 'listCat_tuto' => $listCatTuto));
 			}
 		}elseif($this->request->is('PUT')){
 			$this->request->data = Sanitize::clean($this->request->data);
@@ -59,9 +65,11 @@ class BackoffController extends Controller{
 			$this->request->data['art_online'] = (isset($this->request->data['art_online']))? $this->request->data['art_online'] : 0;
 			if($this->Article->update($this->request->data, array('where' => array(
 											'art_id' => $id)))){
-				//die();
 				$this->session->setFlash('Article bien modifié !', 'success');
+				$this->reloadRss();
+
 			}
+			
 			$this->redirect('backoff/listArticle');
 
 			
@@ -73,11 +81,13 @@ class BackoffController extends Controller{
 			$this->request->data['art_use_id'] = Auth::$session['use_id'];
 			if($this->Article->save($this->request->data)){
 				$this->session->setFlash('Article bien enregistré !', 'success');
+				$this->reloadRss();
 				$this->redirect('backoff/index');
 			}else{
 				die('haaaanan');
 			}
 		}
+
 		$this->render('addArticle');
 	}
 
@@ -230,16 +240,16 @@ class BackoffController extends Controller{
 				$this->session->setFlash('Catégorie bien modifiée !', 'success');
 				$this->redirect('backoff/listCat');
 			}else{
-				$this->session->setFlash('Erreur de modification !');
+				$this->session->setFlash('Erreur de modification !', 'success');
 				$this->redirect('backoff/listCat');
 			}
 
 		}elseif($this->request->is('POST')){
 			if($this->Categorie->save($this->request->data)){
-				$this->session->setFlash('Catégorie bien ajouté !');
+				$this->session->setFlash('Catégorie bien ajouté !', 'success');
 				$this->redirect($this->referer);
 			}else{
-				$this->session->setFlash('Erreur de sauvegarde !');
+				$this->session->setFlash('Erreur de sauvegarde !', 'error');
 			}
 			
 		}
@@ -537,10 +547,96 @@ class BackoffController extends Controller{
 		}
 
 	}
-
+	/**
+	 *@name fileExplorer
+	 *@description explorateur de fichier sur le serveur web
+	 *@param (string)$folder vaut stories par défaut
+	 *@return (array)folder_content
+	 * */
+	public function fileExplorer($folder='stories'){
+		if($this->request->is('GET')){
+			$this->layout = 'back';
+			$prev = explode('|', $folder);
+			$i = count($prev);
+			unset($prev[$i-1]);
+			unset($prev[$i]);
+			$back = implode('|',$prev);
+			$folder = str_replace('|','/',$folder);
+			$dir = WEBROOT.'/'.$folder;
+			$folder = str_replace('/', '|',$folder);
+			$list = array();
+			if(is_dir($dir)){
+				if($dir_content = opendir($dir)){
+					while(($file = readdir($dir_content)) !== false){
+						if($file !== '.' && $file !== '..'){
+							$list[] = $file;
+						}
+					}
+					closedir($dir_content);
+				}
 	
+			}else{
+				$this->session->setFlash('Erreur d\'url veuillez suivre les liens de navigations','error');
+				$this->redirect($this->referer);
+			}
+		}else if($this->request->is('POST')){
+			debug($folder);
+			debug($this->request->data);
+			debug($this->request->file);
+			$nfile = (!empty($this->request->file['new_file']))? $this->request->file['new_file'] : '';
+			$dest = WEBROOT.DS;
+			$folder = str_replace('|', '/', $folder);
+			//die();
+			if(move_uploaded_file($nfile['tmp_name'], $dest.$folder.DS.$nfile['name'])){
+				$this->session->setFlash('Fichier bien ajouté', 'success');
+				$this->redirect($this->referer);
+				
+			}
+		}
+		$this->set('explorer', array('file' => $list, 'folder' => $folder,'dir'=> $dir, 'back' => $back));
+		$this->render('explorer');
+	}
 
+	/**
+	 *@name reloadRss
+	 *@description recharge le fichier xml rss
+	 * */
+	public function reloadRss() {
+		$this->loadModel('Article');
+		$data = $this->Article->find(array('fields' => 'art_id, 
+								art_title, 
+								art_content, art_dateC, art_slot, cat_id, cat_name, use_id, use_login, use_mail',
+									 'where' => array(
+									 	'art_online' => true),
+									 'join' => array(
+									 	'type' => 'LEFT OUTER JOIN',
+									 	'table' => array('categories', 'users'),
+										'condition' => array('art_cat_id = cat_id',
+									       	'art_use_id = use_id')),
+									 'limit' => 'LIMIT 10'));
+		
+		$this->RssHelper->Css('css/rss.css')
+				->TitleChannel('Le Blog de Cnam-it.fr')
+				->LinkChannel('http://www.cnam-it.fr/blog')
+				->DescriptionChannel('Le flux RSS du site CNAM-IT.fr, le site pour les étudiants au CNAM en informatique')
+				->Ttl('1');
+		$this->RssHelper->startRss();
+				
+		foreach($data as $k => $v){
+			$this->RssHelper->Title($v['art_title'])
+					->Link($link = ($v['art_slot'] == 'blog')? "http://www.cnam-it.fr/blog/voir/".$v['art_id'] : "http://www.cnam-it.fr/video/voir".$v['art_id'])
+					->Description($this->Truncate->fragment($this->Markitup->bbcodeParse($v['art_content']),30))
+					->Author($v['use_mail'])
+					->Category($v['cat_name'])
+					->Guid(strtotime($v['art_dateC']))
+					->PubDate(date(DateTime::RSS, strtotime($v['art_dateC'])))
+					->Source();
+			$this->RssHelper->loadItem();	
+		}
+		
+		
+		$this->RssHelper->endRss();
+		$this->RssHelper->writeRss('rss.xml');
 
-
-	
+	}	
 }

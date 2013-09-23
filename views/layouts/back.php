@@ -10,6 +10,7 @@
 	<?php echo $this->link('css', 'bootstrap.min'); ?>
 	<?php echo $this->link('markitup/skins/simple', 'style', 'css'); ?>
 	<?php echo $this->link('markitup/sets/bbcode', 'style', 'css'); ?>
+	<?php echo $this->link('javascript/jqueryUi/css/start', 'jquery-ui-1.10.3.custom', 'css'); ?>
 	<?php echo $this->link('css', 'shCore'); ?>
 	<?php echo $this->link('css', 'shThemeDefault'); ?>
 	<?php echo $this->link('css', 'layout'); ?>
@@ -22,6 +23,8 @@
 	<?php echo $this->link('javascript', 'shBrushPhp'); ?>
 	<?php echo $this->link('javascript', 'style'); ?>
 	<?php echo $this->link('javascript', 'bootstrap.min'); ?>
+	<?php echo $this->link('javascript', 'jqueryUi/js/jquery-ui-1.10.3.custom.min'); ?>
+
 </head>
 <body>
 	<div id="wrap">
