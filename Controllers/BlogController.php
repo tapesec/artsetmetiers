@@ -193,8 +193,26 @@ class BlogController extends Controller{
 	public function page(){
 		$this->loadModel('Page');
 		$data['pages'] = $this->Page->find(array('where' => array('pag_type' => 'front'),
-												 'order' => 'pag_id ASC'));
-		return $data['pages'];
+			'order' => 'pag_id ASC'));
+
+		$items = array();
+		$home = array();
+		$user = array();
+		$admin = array();
+		foreach($data['pages'] as $k => $v):
+			if(!empty(Auth::$session)):
+				$user[] = $v;
+			endif;
+			if(!empty(Auth::$session) && Auth::$session['use_statut'] == 10):
+				$admin[] = $v;
+			else if($v['pag_name'] != 'Blog'){
+				$items[] = $v;
+			}else{
+				$home[] = $v;
+			}
+		}
+		
+		return array('items' => $items, 'home' => $home, 'user' => $user, 'admin' => $admin);
 	}
 
 	public function ajaxTest(){
