@@ -201,18 +201,19 @@ class BlogController extends Controller{
 		$admin = array();
 		foreach($data['pages'] as $k => $v):
 			if(!empty(Auth::$session)):
-				$user[] = $v;
+				if($v['pag_name'] == 'Carte de visite' || $v['pag_name'] == 'MP' && $v['pag_name'] != 'Accueil'):
+					$user[] = $v;
+				endif;
 			endif;
-			if(!empty(Auth::$session) && Auth::$session['use_statut'] == 10):
-				$admin[] = $v;
-			else if($v['pag_name'] != 'Blog'){
+			
+			if($v['pag_name'] != 'Accueil' && $v['pag_name'] != 'Carte de visite' && $v['pag_name'] != 'MP' && $v['pag_name'] != 'Interface administration'):
 				$items[] = $v;
-			}else{
+			elseif($v['pag_name'] == 'Accueil'):
 				$home[] = $v;
-			}
-		}
+			endif;
+		endforeach;
 		
-		return array('items' => $items, 'home' => $home, 'user' => $user, 'admin' => $admin);
+		return array('items' => $items, 'home' => $home, 'user' => $user);
 	}
 
 	public function ajaxTest(){

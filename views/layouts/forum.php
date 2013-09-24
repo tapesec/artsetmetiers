@@ -32,50 +32,10 @@
 </head>
 <body>
 	<div id="wrap">
-	<div class="row-fluid">
-		<div class="span12">
-			<?php $data['pages'] = $this->layoutLoad('Blog', 'page'); ?>
-		    <div class="navbar navbar-static-top">
-			    <div class="navbar-inner">
-		    		<a class="brand" href="#"><h1><?php echo ucfirst($this->request->controller); ?></h1></a>
-		    		<ul class="nav">
-		    			<li class="divider-vertical"></li>
-		    			<li class=""><a href="<?php echo BASE_URL.$data['pages'][3]['pag_url']; ?>"><?php echo $data['pages'][3]['pag_name'] ?></a></li>
-		    			<li class="divider-vertical"></li>	
-		    			<?php foreach ($data['pages'] as $k => $v): current($v); ?>
-			    			<?php if($v['pag_name'] != 'Accueil') :?>
-			    				<?php if($v['pag_name'] != 'Carte de visite' || isset(Auth::$session)): ?>
-				    				<?php if($v['pag_name'] == ucfirst($this->request->controller)): ?>
-				    					<li class="active"><a  href="<?php echo BASE_URL.$v['pag_url']; ?>"><?php echo $v['pag_name']; ?></a></li>
-				    					<li class="divider-vertical"></li>
-				    				<?php else: ?>
-										<li><a href="<?php echo BASE_URL.$v['pag_url']; ?>"><?php echo $v['pag_name']; ?></a></li>
-										<li class="divider-vertical"></li>
-									<?php endif; ?>
-								<?php endif; ?>	
-							<?php endif; ?>
-						<?php endforeach; ?>
-						<?php //debug(Auth::$session); ?>
-						<?php if(isset(Auth::$session)): ?>
-							<?php echo '<li class="dropdown ">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-								<strong>'.ucfirst(Auth::$session['use_login']).'</strong>
-								<b class="caret"></b>
-								</a>
-								<ul class="dropdown-menu">
-								<li><a href="'.BASE_URL.'/auth/edit'.'">Edition profil</a></li>
-								<li><a href="'.BASE_URL.'/auth/logout'.'">Déconnection</a></li>
-								</ul>
-								</li>'; ?>
-								<li><a href="<?php echo BASE_URL.'/message'; ?>"><?php $this->img('design/img/Mail.png', array('class' => 'icone_topbar')); $nbMP = $this->layoutLoad('message', 'mesCount'); echo $nbMP; ?></a></li>
-						<?php endif; ?>
+	<!-- zone navigation principale -->
+	<?php require ROOT.DS.'views'.DS.'layouts'.DS.'include'.DS.'mainNav.php'; ?>
+	<!-- end -->
 
-		    		</ul>
-		    	</div>
-			</div>
-			<?php echo $this->session->flash(); ?>
-		</div>
-	</div>
 	<div class="row-fluid banner_area">
 		<div class="span12 banner">
 			<?php $this->img('design/img/bannertestS2.jpg', array('alt' => 'Bannière du site CNAM-IT.FR')); ?>
