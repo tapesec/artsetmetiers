@@ -77,11 +77,11 @@
 				    <ul class="thumbnails">
     					<li class="span3">
 	    					<a href="<?php echo BASE_URL.'/blog/index'; ?>" class="thumbnail">
-	    					<?php $this->img('design/img/loupe.png', array('alt' => 'image représentant une loupe pour acceder au blog')); ?>
+	    					<?php $this->img('design/img/loupe.png', array('alt' => 'image loupe blog')); ?>
 	    				</a>
 					    	<div class="caption">
 								<h2>Un Blog</h2>
-								<p>Retrouvez y l'actualité du CNAM mais aussi des articles relatif à la programmation informatique et plus générlament aux nouvelles technologies</p>
+								<p>Retrouvez y l'actualité du CNAM mais aussi des articles relatifs à la programmation informatique et plus généralement aux nouvelles technologies</p>
 								<p>
 								<a class="btn btn-info" href="<?php echo BASE_URL.'/blog/index'; ?>">Lisez !</a>
 								</p>
@@ -90,11 +90,11 @@
     					<?php $url = (isset(Auth::$session))?  '/parcours/voir' : '/auth/connexion' ; ?>
     					<li class="span3">
 	    					<a href="<?php echo BASE_URL.$url; ?>" class="thumbnail">
-	    					<?php $this->img('design/img/cv.png', array('alt' => 'image représentant une carte de visite pour acceder à la partie carte de visite')); ?>
+	    					<?php $this->img('design/img/cv.png', array('alt' => 'image carte de visite')); ?>
 	    				</a>
 					    	<div class="caption">
 								<h2>Votre carte de visite</h2>
-								<p>Vous pouvez parametrez tout un tas d'information relatif à votre parcours au CNAM, les matieres suivis les diplômes obtenus, votre milieu professionnel et plein d'autres choses pour vous reconnaitre.</p>
+								<p>Vous pouvez parametrer tout un tas d'informations relatif à votre parcours au CNAM, les matières suivies les diplômes obtenus, votre secteur d'activité et plein d'autres choses pour vous reconnaitre.</p>
 								<p>
 								
 								<a class="btn btn-info" href="<?php echo BASE_URL.$url; ?>">Montrez !</a>
@@ -107,7 +107,7 @@
 	    				</a>
 					    	<div class="caption">
 								<h2>Le Forum</h2>
-								<p>Formez une vrai communauté des étudiants du CNAM en département informatique, posez vos questions ou répondez à vos camarades. Echangez vos réalisations, retrouvez vous pour progressez plus facilement ensemble.</p>
+								<p>Formez une vrai communauté des étudiants du CNAM en nouvelles technologies, posez vos questions ou répondez à vos camarades. Echangez vos réalisations, retrouvez vous pour progresser plus facilement ensemble.</p>
 								<p>
 								<a class="btn btn-info" href="<?php echo BASE_URL.'/forum/index'; ?>">Participez !</a>
 								</p>
@@ -120,7 +120,7 @@
 	    				</a>
 					    	<div class="caption">
 								<h2>Tutoriels vidéo</h2>
-								<p>Retrouvez dans cette rubrique toutes les vidéos à thème sur la programmation ou l'administration systeme, des compléments d'explication de cours etc..
+								<p>Retrouvez dans cette rubrique toutes les vidéos à thème sur la programmation ou l'administration système, des compléments d'explication de cours etc..
 								<p>
 								<a class="btn btn-info" href="<?php echo BASE_URL.'/video/index'; ?>">Regardez !</a>
 								</p>
