@@ -1,3 +1,4 @@
+config/Config.php
 webroot/index.php
 webroot/rss.xml
 webroot/img/avatar
