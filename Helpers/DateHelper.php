@@ -18,9 +18,19 @@ class DateHelper extends DateTime{
 		
 		if($delay){
 			$now = new DateTime();
-			$interval = $now->diff($obj);	
-			if($interval->days <= 1){
-				return 'Il y a '.$interval->format('%h heures');
+			$interval = $now->diff($obj);
+			
+			if($interval->i < 1){
+				$out = ($interval->s == 1)? 'seconde' : 'secondes';
+				return 'Il y a '.$interval->format('%s '.$out);
+			}
+			if($interval->h < 1){
+				$out = ($interval->i == 1)? 'minute' : 'minutes';
+				return 'Il y a '.$interval->format('%i '.$out);
+			}	
+			if($interval->days < 1){
+				$out = ($interval->h == 1)? 'heure' : 'heures';
+				return 'Il y a '.$interval->format('%h '.$out);
 			}else{
 				return $dateFinale = ucfirst(strftime('%A %d %B %Y', $strdate));
 			}
