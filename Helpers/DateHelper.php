@@ -34,10 +34,6 @@ class DateHelper extends DateTime{
 					$out = ($interval->h == 1)? 'heure' : 'heures';
 					return 'Il y a '.$interval->format('%h '.$out);
 				}
-			}	
-				
-				
-
 			}else{
 				return $dateFinale = ucfirst(strftime('%A %d %B %Y', $strdate));
 			}
