@@ -33,7 +33,7 @@
 			<?php echo '<td>'; ?>
 			<?php $this->img($post['ava_url'], array('alt' => 'Avatar de '.$post['use_login'], 'class' => 'img-polaroid img-avatar auto')); ?>
 			
-			<?php echo '<a class="text-success user_name" href="#">'.ucfirst($post['use_login'].'</a>'); ?>
+			<?php echo '<a class="text-success user_name" href="'.BASE_URL.'/parcours/voir/'.$post['use_id'].'">'.ucfirst($post['use_login'].'</a>'); ?>
 			<?php $count = $this->layoutLoad('forum', 'messageUserCount', $post['use_id']); ?>
 			<?php echo '<span class="text-info compteur_post"><small>Message : '.$count.'</small></span>'; ?>
 			
@@ -58,7 +58,7 @@
 				<?php echo '<td>'; ?>
 				<?php $this->img($v['ava_url'], array('alt' => 'Avatar de '.ucfirst($v['use_login']), 'class' => 'img-avatar img-polaroid auto')); ?>
 			
-				<?php echo '<a class="text-success user_name" href="#">'.ucfirst($v['use_login'].'</a>'); ?>
+				<?php echo '<a class="text-success user_name" href="'.BASE_URL.'/parcours/voir/'.$post['use_id'].'">'.ucfirst($v['use_login'].'</a>'); ?>
 				<?php $count = $this->layoutLoad('forum', 'messageUserCount', $v['use_id']); ?>
 				
 				<?php echo '<span class="text-info compteur_post"><small>Message : '.$count.'</small></span>'; ?>

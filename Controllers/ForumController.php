@@ -337,14 +337,15 @@ class ForumController extends Controller{
 	**/
 	public function lastSubject($id){
 		$this->loadModel('Section');
-		$last = $this->Section->find(array('fields' => 'rep_dateC, rep_title, use_login',
-										   'join' => array('type' => 'LEFT OUTER JOIN',
-										   				   'table' => array('subjects', 'replies', 'users'),
-										   				   'condition' => array('sec_id = sub_id_sections',
-										   				   						'sub_id = rep_id_subjects',
-										   				   						'use_id = rep_id_author')),
-										   'where' => array('sec_id' => $id),
-										   'limit' => 'LIMIT 1'));
+		$last = $this->Section->find(array('fields' => 'sub_id, sub_dateC, sub_title, use_login',
+						'join' => array('type' => 'LEFT OUTER JOIN',
+								'table' => array('subjects', 'users'),
+								'condition' => array('sec_id = sub_id_sections',
+								'use_id = sub_id_author')),
+								'where' => array('sec_id' => $id),
+								'order' => 'sub_id DESC',
+								'limit' => 'LIMIT 1'));
+		debug($last);
 		return $last;
 
 	}
