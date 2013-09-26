@@ -27,8 +27,9 @@
 			</td>
 			<td>
 				<?php $last = $this->layoutLoad('forum', 'lastSubject', $v['sec_id']); ?>
-				<?php if(!empty($last[0]['rep_dateC'])): ?>
-				<?php echo DateHelper::fr($last[0]['rep_dateC']). ' par <a class="text-success" href="'. BASE_URL.'/parcours/voir/'.$v['sec_id'].'">'.ucfirst($last[0]['use_login']).'</a>'; ?>
+				<?php if(!empty($last[0]['sub_dateC'])): ?>
+				<a href="<?php echo BASE_URL.'/forum/posts/'.$last[0]['sub_id']; ?>"><?php echo $last[0]['sub_title'];?></a><br>
+				<?php echo DateHelper::fr($last[0]['sub_dateC']). ' par <a class="text-success" href="'. BASE_URL.'/parcours/voir/'.$v['sec_id'].'">'.ucfirst($last[0]['use_login']).'</a>'; ?>
 				<?php else: ?>
 				<?php echo '-'; ?>
 				<?php endif; ?>
