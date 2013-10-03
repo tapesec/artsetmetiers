@@ -67,6 +67,10 @@ class MessageController extends Controller{
 						  		'table' => array('users', 'avatars'),
 								'condition' => array('mes_id_author = use_id', 'ava_id_user = use_id')),
 						      'where' => array('mes_id' => $id), 		     		            			        'order' => 'mes_dateC ASC'));
+				
+		if($message[0]['mes_id_author'] != Auth::$session['use_id'] &&  $message[0]['mes_id_dest'] != Auth::$session['use_id']):
+			$this->e404('Vous n\'êtes pas autorisé à acceder à cette page ou celle-ci n\'existe pas suivez les liens de navigation');
+		endif;
 
 		$reponses = $this->Reponse->find(array('fields' => 'rep_id, rep_content, rep_dateC, use_id, use_login, ava_url',
 						       'join' => array(
@@ -162,6 +166,12 @@ class MessageController extends Controller{
 		$this->loadModel('Reponse');
 		Request::$handMade = true;
 		debug($this->request->data);
+		if(!isset($this->request->data['mes_dest_del']) && !isset($this->request->data['mes_auth_del'])):
+			$this->redirect('message/index');
+			$this->session->setFlash('vous ne pouvez pas faire ça ! attention','error');
+			exit();
+		endif;
+
 		if(isset($this->request->data['mes_dest_del'])) {
 			$dest_del = $this->request->data['mes_dest_del'];
 			foreach($dest_del as $k => $v) {
