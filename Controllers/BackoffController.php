@@ -638,5 +638,24 @@ class BackoffController extends Controller{
 		$this->RssHelper->endRss();
 		$this->RssHelper->writeRss('rss.xml');
 
+	}
+
+	/**
+	*@name ressourceSave
+	*@description sauvegarde une ressource tel qu'un fichier de cours en le liant à l'UE correspondant
+	*@param $id l'identifiant de l'UE correspondant
+	*@return (void)
+	* */
+	public function ressourceSave($id) {
+		$this->loadModel('Ressource');
+		if($this->request->is('POST')){
+			$name = str_replace(' ', '_', $this->request->data['sup_name']);
+			$this->request->data['sup_dateC'] == new DateTime('NOW', new DateTimeZone('EUROPE/Paris'));
+			$this->request->data['sup_url'] == '/ressources/'.$name;
+			$this->request->data['sup_uni_id'] = $id;
+			if($this->Ressource->save($this->request->data)){
+				
+			}
+		}	
 	}	
 }

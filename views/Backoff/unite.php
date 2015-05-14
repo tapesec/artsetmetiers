@@ -56,7 +56,16 @@ if(isset($unites['dip_unite'])){
 
 	<?php echo $this->Form->create('backoff/UEavatar/'.$id= (isset($edit['uni_id']))? $edit['uni_id'] : false, array('type' => 'FILE', 'name' => 'uni_id', 'value' => $id)); ?>
 	<?php echo $this->Form->input(array('type' => 'file', 'label' => 'Icone de l\'unité d\'enseignement :' ,'name' => 'uniImage')); ?>
-	<?php echo $this->Form->input(array('type' => 'submit', 'value' => 'uploadez', 'class' => 'btn btn-info submit')); ?>
+	<?php echo $this->Form->end(array('type' => 'submit', 'value' => 'uploadez', 'class' => 'btn btn-info submit')); ?>
+
+	<?php echo $this->Form->create('backoff/ressourceSave/'.$id = (isset($edit['uni_id']))? $edit['uni_id'] : false, array('type' => 'FILE', 'name' => 'uni_id', 'value' => $id)); ?>
+
+	<?php echo $this->Form->input(array('type' => 'file', 'label' => 'Uploadez une ressource de cours :', 'name' => 'uniRessource')); ?>
+
+	<?php echo $this->Form->input(array('type' => 'text', 'label' => 'nom du fichier :', 'name' => 'sup_name')); ?>
+
+	<?php echo $this->Form->end(array('type' => 'submit', 'value' => 'uploadez', 'class' => 'btn btn-info submit')); ?>
+
 </div>
 
 	<div class="span4">
